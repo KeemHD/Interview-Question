@@ -9,31 +9,16 @@
 
 
 # Definition for singly-linked list.
-'''
+
 class ListNode(object):
   def __init__(self, x):
     self.val = x
     self.next = None
 
 class Solution:
-  def addTwoNumbers(self, l1, l2, c = 0):
-# Fill this in.
-
-result = ListNode(0)
-result_tail = result
-
-while l1 or l2 or c:
-    val1 = (l1.val if l1 else 0)
-    val2 = (l2.val if l2 else 0)
-    c, out = divmod(val1 + val2 + c, 10)
-
-    result_tail.next = ListNode(out)
-    result_tail = result_tail.next
-
-    l1 = (l1.next if l1 else None)
-    l2 = (l2.next if l2 else None)
-
-return result
+    def addTwoNumbers(self, l1, l2, c = 0):
+        # Fill this in.
+        print("addTwoNumber function")
 
 l1 = ListNode(2)
 l1.next = ListNode(4)
@@ -45,38 +30,47 @@ l2.next.next = ListNode(4)
 
 result = Solution().addTwoNumbers(l1, l2)
 
+print("Adding Linked list Question")
+print("<-----------------START---------------<")
 while result:
     print(result.val)
     result = result.next
 # 7 0 8
-'''
+print("<-----------------END---------------<")
 
 #Given a string, find the length of the longest substring
 # without repeating characters. 4/3/20
 
-'''
+
 class Solution:
   def lengthOfLongestSubstring(self, s):
     # Fill this in.
+    print("")
 
-print Solution().lengthOfLongestSubstring('abrkaabcdefghijjxxx')
+print("Longest Substring Question")
+print("<-----------------START---------------<")
+print(Solution().lengthOfLongestSubstring('abrkaabcdefghijjxxx'))
 # 10
-'''
+print("<-----------------END---------------<")
 
 #A palindrome is a sequence of characters that reads
 # the same backwards and forwards. Given a string, s,
 # find the longest palindromic substring in s. 4/4/20
 
-'''
+
 class Solution: 
     def longestPalindrome(self, s):
       # Fill this in.
-        
+      print("")
+
+print("Longest Palindromic Substring")
+print("<-----------------START---------------<")
 # Test program
 s = "tracecars"
 print(str(Solution().longestPalindrome(s)))
 # racecar
-'''
+print("<-----------------End---------------<")
+
 
 #Imagine you are building a compiler. Before running any code,
 # the compiler must check that the parentheses in the program
@@ -88,31 +82,26 @@ print(str(Solution().longestPalindrome(s)))
 #- Open brackets are closed in the correct order.
 #- Note that an empty string is also considered valid. 4/5/20
 
-'''
+
 class Solution:
   def isValid(self, s):
     # Fill this in.
-    status = False
-    brace_count = 0
-    curley_count = 0
+    print("")
 
-    for index in s:
-        if index == "("
+# Test Program
+print("Corresponding Brackets Question")
+print("<-----------------START---------------<")
+s = "()(){(())"
+# should return False
+print(Solution().isValid(s))
 
-
-    # Test Program
-    s = "()(){(())"
-    # should return False
-    print(Solution().isValid(s))
-
-    s = ""
-    # should return True
-    print(Solution().isValid(s))
-
-    s = "([{}])()"
-    # should return True
-    print(Solution().isValid(s))
-'''
+s = ""
+# should return True
+print(Solution().isValid(s))
+s = "([{}])()"
+# should return True
+print(Solution().isValid(s))
+print("<-----------------END---------------<")
 
 #Given a sorted array, A, with possibly duplicated elements,
 # find the indices of the first and last occurrences of a
@@ -126,26 +115,29 @@ class Solution:
 # Input: A = [1,2,3,4,5,6,10], target = 9
 # Output: [-1, -1]
 
-'''
+
 class Solution:
   def getRange(self, arr, target):
-
-
-# Fill this in.
+    # Fill this in.
+    print("")
 
 # Test program 
 arr = [1, 2, 2, 2, 2, 3, 4, 7, 8, 8]
 x = 2
+
+print("First and Last Occurrences of Target Element")
+print("<-----------------START---------------<")
 print(Solution().getRange(arr, x))
 # [1, 4]
-'''
+print("<-----------------END---------------<")
+
 
 #Given a singly-linked list, reverse the list. This can be done
 # iteratively or recursively. Can you get both solutions? 4/7/20
 # Input: 4 -> 3 -> 2 -> 1 -> 0 -> NULL
 # Output: 0 -> 1 -> 2 -> 3 -> 4 -> NULL
 
-'''
+
 class ListNode(object):
   def __init__(self, x):
     self.val = x
@@ -164,10 +156,12 @@ class ListNode(object):
   # Iterative Solution
   def reverseIteratively(self, head):
     # Implement this.
+    print("")
 
   # Recursive Solution      
   def reverseRecursively(self, head):
     # Implement this.
+    print("")
 
 # Test Program
 # Initialize the test list: 
@@ -181,6 +175,8 @@ node2.next = node3
 testTail = ListNode(0)
 node3.next = testTail
 
+print("Reverse the List Question")
+print("<-----------------START---------------<")
 print("Initial list: ")
 testHead.printList()
 # 4 3 2 1 0
@@ -189,7 +185,7 @@ testHead.reverseIteratively(testHead)
 print("List after reversal: ")
 testTail.printList()
 # 0 1 2 3 4
-'''
+print("<-----------------END---------------<")
 
 #Given a list of numbers with only 3 unique
 # numbers (1, 2, 3), sort the list in O(n) time.
@@ -198,13 +194,17 @@ testTail.printList()
 #Output: [1, 1, 2, 2, 3, 3, 3]
 #4/8/20
 
-'''
-def sortNums(nums):
-  # Fill this in.
 
-print sortNums([3, 3, 2, 1, 3, 2, 1])
+def sortNums(nums):
+    # Fill this in.
+    print("")
+
+print("Sort a List")
+print("<-----------------START---------------<")
+print(sortNums([3, 3, 2, 1, 3, 2, 1])
 # [1, 1, 2, 2, 3, 3, 3]
-'''
+print("<-----------------END---------------<")
+
 
 #You are given a list of numbers, and a target number k.
 # Return whether or not there are two numbers in the list
@@ -213,13 +213,16 @@ print sortNums([3, 3, 2, 1, 3, 2, 1])
 #Given [4, 7, 1 , -3, 2] and k = 5,
 #return true since 4 + 1 = 5.
 #4/9/20
-'''
-def two_sum(list, k):
-  # Fill this in.
 
-print two_sum([4,7,1,-3,2], 5)
+def two_sum(list, k):
+    # Fill this in.
+    print("")
+
+print("Number in List that Adds to Target Numbers")
+print("<-----------------START---------------<")
+print(two_sum([4,7,1,-3,2], 5))
 # True
-'''
+print("<-----------------START---------------<")
 
 #Given a list of numbers, where every number shows up
 # twice except for one number, find that one number.
@@ -369,6 +372,7 @@ print("Inverted Binary Tree ")
 root.preorder()
 
 # a b d e c f
+
 print("\n")
 invert(root)
 root.preorder()
