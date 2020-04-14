@@ -1,4 +1,3 @@
-#4/2/20
 #You are given two linked-lists representing two
 #non-negative integers. The digits are stored in
 #reverse order and each of their nodes contain a
@@ -6,10 +5,9 @@
 #Input: (2-> 4 ->3) + (5 -> 6 -> 4)
 #Output: 7 -> 0 -> 8
 #Explanation: 342 + 465 = 807
-
+#4/2/20
 
 # Definition for singly-linked list.
-
 class ListNode(object):
   def __init__(self, x):
     self.val = x
@@ -18,7 +16,7 @@ class ListNode(object):
 class Solution:
     def addTwoNumbers(self, l1, l2, c = 0):
         # Fill this in.
-        print("addTwoNumber function")
+        print("")
 
 l1 = ListNode(2)
 l1.next = ListNode(4)
@@ -32,15 +30,20 @@ result = Solution().addTwoNumbers(l1, l2)
 
 print("Adding Linked list Question")
 print("<-----------------START---------------<")
+
 while result:
     print(result.val)
     result = result.next
-# 7 0 8
+    # 7 0 8
+
 print("<-----------------END---------------<")
 
-#Given a string, find the length of the longest substring
-# without repeating characters. 4/3/20
 
+
+
+#Given a string, find the length of the longest substring
+# without repeating characters.
+# 4/3/20
 
 class Solution:
   def lengthOfLongestSubstring(self, s):
@@ -55,10 +58,10 @@ print("<-----------------END---------------<")
 
 #A palindrome is a sequence of characters that reads
 # the same backwards and forwards. Given a string, s,
-# find the longest palindromic substring in s. 4/4/20
+# find the longest palindromic substring in s.
+# 4/4/20
 
-
-class Solution: 
+class Solution:
     def longestPalindrome(self, s):
       # Fill this in.
       print("")
@@ -80,8 +83,8 @@ print("<-----------------End---------------<")
 #An input string is valid if:
 #- Open brackets are closed by the same type of brackets.
 #- Open brackets are closed in the correct order.
-#- Note that an empty string is also considered valid. 4/5/20
-
+#- Note that an empty string is also considered valid.
+# 4/5/20
 
 class Solution:
   def isValid(self, s):
@@ -105,7 +108,7 @@ print("<-----------------END---------------<")
 
 #Given a sorted array, A, with possibly duplicated elements,
 # find the indices of the first and last occurrences of a
-# target element, x. Return -1 if the target is not found. 4/6/20
+# target element, x. Return -1 if the target is not found.
 # Input: A = [1,3,3,5,7,8,9,9,9,15], target = 9
 # Output: [6,8]
 #
@@ -114,7 +117,7 @@ print("<-----------------END---------------<")
 #
 # Input: A = [1,2,3,4,5,6,10], target = 9
 # Output: [-1, -1]
-
+#4/6/20
 
 class Solution:
   def getRange(self, arr, target):
@@ -133,10 +136,10 @@ print("<-----------------END---------------<")
 
 
 #Given a singly-linked list, reverse the list. This can be done
-# iteratively or recursively. Can you get both solutions? 4/7/20
+# iteratively or recursively. Can you get both solutions?
 # Input: 4 -> 3 -> 2 -> 1 -> 0 -> NULL
 # Output: 0 -> 1 -> 2 -> 3 -> 4 -> NULL
-
+#4/7/20
 
 class ListNode(object):
   def __init__(self, x):
@@ -201,7 +204,7 @@ def sortNums(nums):
 
 print("Sort a List")
 print("<-----------------START---------------<")
-print(sortNums([3, 3, 2, 1, 3, 2, 1])
+print(sortNums([3, 3, 2, 1, 3, 2, 1]))
 # [1, 1, 2, 2, 3, 3, 3]
 print("<-----------------END---------------<")
 
@@ -342,8 +345,8 @@ print(">-----------------END--------------->")
 #You are given the root of a binary tree.
 # all left children should become right children,
 # and all right children should become left children.
-# 4/13/20
 # Invert the binary tree in place. That is,
+# 4/13/20
 
 class Node:
   def __init__(self, value):
