@@ -67,7 +67,22 @@ print("<-----------------END---------------<")
 class Solution:
   def lengthOfLongestSubstring(self, s):
     # Fill this in.
-    print("")
+    count = 0
+    long_count = 0
+    my_dict = {}
+
+    for i in range(len(s)):
+        if s[i] in my_dict:
+            if count > long_count:
+                long_count = count
+                my_dict.clear()
+            count = 0
+        else:
+            char = s[i]
+            my_dict[char] = 1
+            count += 1
+
+    return long_count
 
 print("Longest Substring Question")
 print("<-----------------START---------------<")
