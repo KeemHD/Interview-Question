@@ -16,7 +16,26 @@ class ListNode(object):
 class Solution:
     def addTwoNumbers(self, l1, l2, c = 0):
         # Fill this in.
-        print("")
+        new_list = None
+
+        while l1 is not None:
+            total = l1.val + l2.val+ c
+
+            if total >= 10:
+                total = total % 10
+                c = 1
+
+            if new_list is None:
+                new_list = ListNode(total)
+            elif new_list.next is None:
+                new_list.next = ListNode(total)
+            else:
+                new_list.next.next = ListNode(total)
+
+            l1 = l1.next
+            l2 = l2.next
+
+        return new_list
 
 l1 = ListNode(2)
 l1.next = ListNode(4)
@@ -417,7 +436,7 @@ print(s.max())
 # 3
 s.pop()
 s.pop()
-print("Max in Stack Question ")
+print("Max in Stack  ")
 print("<-----------------START---------------<")
 print(s.max())
 # 2
