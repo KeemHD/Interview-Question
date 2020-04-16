@@ -7,8 +7,15 @@
 # 4/15/20
 
 def staircase(n):
-    print()
 
+    total_comb = 1
+    x = 2
+
+    for _ in range(n - 1):
+        total_comb, x = x, total_comb + x
+
+
+    return total_comb
 
 
 # Fill this in.
@@ -33,21 +40,41 @@ class MaxStack:
 
     def __init__(self):
         # Fill this in.
-        print()
+        self.items = []
+        self.maximum = []
 
     def push(self, val):
         # Fill this in.
-        print()
+        self.items.append(val)
+        length_of_list = len(self.maximum)
+
+        if not self.maximum:
+            self.maximum.append(val)
+
+        elif val > self.maximum[length_of_list-1]:
+            self.maximum.append(val)
+
 
     def pop(self):
         # Fill this in.
-        print()
+        temp = self.items.pop()
+
+
 
     def max(self):
         # Fill this in.
-        print()
+        if not self.items:
+            return None
+        else:
+            temp = self.maximum.pop()
 
+        return temp
+
+
+print("Max in Stack 4-14")
+print("<-----------------START---------------<")
 s = MaxStack()
+
 s.push(1)
 s.push(2)
 s.push(3)
@@ -56,12 +83,9 @@ print(s.max())
 # 3
 s.pop()
 s.pop()
-print("Max in Stack 4-14")
-print("<-----------------START---------------<")
 print(s.max())
 # 2
 print("<-----------------END---------------<")
-
 
 
 #You are given the root of a binary tree.
@@ -75,6 +99,7 @@ class Node:
     self.left = None
     self.right = None
     self.value = value
+
   def preorder(self):
     print(self.value)
     if self.left: self.left.preorder()
