@@ -1,3 +1,17 @@
+#Given a list of numbers, find if there exists a
+# pythagorean triplet in that list.
+# A pythagorean triplet is 3 variables a, b, c where a2 + b2 = c2
+# 4/16/20
+
+def findPythagoreanTriplets(nums):
+    # Fill this in.
+    print()
+
+print(findPythagoreanTriplets([3, 12, 5, 13]))
+# True
+
+
+
 #You are given a positive integer N which
 #represents the number of steps in a staircase.
 #You can either climb 1 or 2 steps at a time.
