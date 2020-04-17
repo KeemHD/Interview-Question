@@ -373,8 +373,20 @@ print("<-----------------END---------------<")
 
 class Solution:
   def getRange(self, arr, target):
-    # Fill this in.
-    print("")
+
+      # Fill this in.
+      first = -1
+      last = -1
+
+      for i in range(len(arr)):
+          if arr[i] == target:
+              if first == -1:
+                  first = i
+              else:
+                  last = i
+
+      return first,last
+
 
 # Test program
 arr = [1, 2, 2, 2, 2, 3, 4, 7, 8, 8]
