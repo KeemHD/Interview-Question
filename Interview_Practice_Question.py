@@ -325,7 +325,8 @@ class ListNode(object):
     # Iterative Solution
     def reverseIteratively(self, head):
         # Implement this.
-        print("")
+        while head.next:
+            head = head.next
 
     # Recursive Solution
     def reverseRecursively(self, head):
@@ -351,7 +352,7 @@ print("Initial list: ")
 testHead.printList()
 # 4 3 2 1 0
 testHead.reverseIteratively(testHead)
-# testHead.reverseRecursively(testHead)
+testHead.reverseRecursively(testHead)
 print("List after reversal: ")
 testTail.printList()
 # 0 1 2 3 4
