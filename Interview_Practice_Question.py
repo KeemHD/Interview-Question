@@ -1,3 +1,33 @@
+#Given two strings, determine the edit distance
+# between them. The edit distance is defined as
+# the minimum number of edits
+# (insertion, deletion, or substitution)
+# needed to change one string to the other.
+#For example, "biting" and "sitting" have an
+# edit distance of 2 (substitute b for s, and insert a t).
+# 4/17/20
+
+def distance(s1, s2):
+    # Fill this in.
+    count = 0
+
+    if len(s1) == len(s2):
+        print("Same length")
+        for i in range(len(s1)):
+            if s1[i] != s2[i]:
+                count += 1
+
+    return count
+
+print("Edit distance 4-17")
+print("<-----------------START---------------<")
+print(distance('biting', 'sitting'))
+# 2
+print("<-----------------END---------------<")
+
+
+
+
 #Given a list of numbers, find if there exists a
 # pythagorean triplet in that list.
 # A pythagorean triplet is 3 variables a, b, c where a2 + b2 = c2
@@ -7,8 +37,11 @@ def findPythagoreanTriplets(nums):
     # Fill this in.
     print()
 
+print("Find Pythagorean Triplets  4-16")
+print("<-----------------START---------------<")
 print(findPythagoreanTriplets([3, 12, 5, 13]))
 # True
+print("<-----------------END---------------<")
 
 
 
@@ -115,7 +148,7 @@ class Node:
     self.value = value
 
   def preorder(self):
-    print(self.value)
+    #print(self.value)
     if self.left: self.left.preorder()
     if self.right: self.right.preorder()
 
@@ -174,7 +207,7 @@ def findCeilingFloor(root_node, k, floor=None, ceil=None):
 
 print("<-----------------START---------------<")
 print("Binary Tree floor and ceiling find 4-12")
-#print(findCeilingFloor(root, 5)
+print(findCeilingFloor(root, 5))
 # (4, 6)
 print(">-----------------END--------------->")
 
@@ -316,6 +349,7 @@ class ListNode(object):
     def printList(self):
         node = self
         output = ''
+
         while node != None:
             output += str(node.val)
             output += " "
@@ -325,8 +359,15 @@ class ListNode(object):
     # Iterative Solution
     def reverseIteratively(self, head):
         # Implement this.
-        while head.next:
-            head = head.next
+
+        while self.next:
+            while head.next:
+                head = head.next
+
+            self.val = head.val
+            self = self.next
+
+        return self
 
     # Recursive Solution
     def reverseRecursively(self, head):
