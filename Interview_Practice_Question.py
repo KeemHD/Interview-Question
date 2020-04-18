@@ -1,3 +1,22 @@
+#Given a mathematical expression with just single digits,
+# plus signs, negative signs, and brackets, evaluate the
+# expression. Assume the expression is properly formed.
+#Example:
+#Input: - ( 3 + ( 2 - 1 ) )
+#Output: -4
+# 4/18/20
+
+def eval(expression):
+    # Fill this in.
+    print()
+
+print("Simple Calculator 4-18")
+print("<-----------------START---------------<")
+print(eval('- (3 + ( 2 - 1 ) )'))
+# -4
+print("<-----------------END---------------<")
+
+
 #Given two strings, determine the edit distance
 # between them. The edit distance is defined as
 # the minimum number of edits
@@ -10,13 +29,7 @@
 def distance(s1, s2):
     # Fill this in.
     count = 0
-
-    if len(s1) == len(s2):
-        print("Same length")
-        for i in range(len(s1)):
-            if s1[i] != s2[i]:
-                count += 1
-
+    
     return count
 
 print("Edit distance 4-17")
