@@ -1,3 +1,26 @@
+#Given an undirected graph, determine if a cycle exists in the graph.
+# 4/19/20
+
+def find_cycle(graph):
+    #Fill this in.
+    print()
+graph = {
+  'a': {'a2':{}, 'a3':{} },
+  'b': {'b2':{}},
+  'c': {}
+}
+print("Find Cycles in a Graph 4-19")
+print("<-----------------START---------------<")
+print(find_cycle(graph))
+# False
+graph['c'] = graph
+print(find_cycle(graph))
+# True
+print("<-----------------END---------------<")
+
+
+
+
 #Given a mathematical expression with just single digits,
 # plus signs, negative signs, and brackets, evaluate the
 # expression. Assume the expression is properly formed.
@@ -8,7 +31,28 @@
 
 def eval(expression):
     # Fill this in.
-    print()
+    op_stack = []
+    post_stack = []
+    '''
+    for op in expression:
+        if op == '0' or op == '0':
+            post_stack.append(op)
+        if op == '(':
+            op_stack.append(op)
+        if op == ')':
+            while op_stack and op_stack.top() != '(':
+                post_stack.append(op_stack.pop())
+            op_stack.pop()
+        if op == '+' or op == '-':
+            if op_stack.empty() or op_stack.top() == '(':
+                post_stack.push(op)
+            else:
+                while not op_stack.empty() and op_stack.top() != '(':
+                    op_stack.pop()
+                    post_stack.append(op_stack.top())
+    '''
+    return 2222
+
 
 print("Simple Calculator 4-18")
 print("<-----------------START---------------<")
