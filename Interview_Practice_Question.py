@@ -1,3 +1,45 @@
+#You are given a 2D array of characters, and a target string.
+# Return whether or not the word target word exists in the matrix.
+# Unlike a standard word search, the word must be either
+# going left-to-right, or top-to-bottom in the matrix.
+# 4/20/20
+
+def word_search(matrix, word):
+    #Fill this in.
+    status = False
+    h_count = 0
+    v_count = 0
+
+    for i in range(len(matrix)):
+        for x in range(len(matrix[i])):
+            if word[x] == matrix[i][x]:
+                h_count += 1
+
+            if word[x] == matrix[x][i]:
+                v_count += 1
+
+        if h_count == len(word) or v_count == len(word):
+            status = True
+            break
+
+        h_count = 0
+        v_count =0
+
+    return status
+
+matrix = [
+    ['F', 'A', 'C', 'I'],
+    ['O', 'B', 'Q', 'P'],
+    ['A', 'N', 'O', 'B'],
+    ['M', 'A', 'S', 'S'],]
+
+print("Word search 4-20")
+print("<-----------------START---------------<")
+print(word_search(matrix, 'FOAM'))
+print("<-----------------END---------------<")
+
+# True
+
 #Given an undirected graph, determine if a cycle exists in the graph.
 # 4/19/20
 
