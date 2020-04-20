@@ -416,15 +416,16 @@ class ListNode(object):
     # Iterative Solution
     def reverseIteratively(self, head):
         # Implement this.
+        prev = None
+        current = self
 
-        while self.next:
-            while head.next:
-                head = head.next
-
-            self.val = head.val
-            self = self.next
-
-        return self
+        while current is not None:
+            next = current.next
+            current.next = prev
+            prev = current
+            current = next
+        self = prev
+       
 
     # Recursive Solution
     def reverseRecursively(self, head):
