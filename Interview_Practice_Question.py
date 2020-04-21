@@ -34,7 +34,7 @@ class Solution:
                   sum = nums[i]
                   temp = 1
 
-      if short_length == len(nums):
+      if short_length == len(nums) or short_length == 1:
           short_length = 0
 
       return short_length
