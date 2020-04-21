@@ -10,8 +10,35 @@
 
 class Solution:
   def minSubArrayLen(self, nums, s):
-    # Fill this in
-    print()
+      #Fill this in
+      sum = 0
+      temp =0
+      short_length = len(nums)
+
+
+      for i in range(len(nums)):
+          sum += nums[i]
+          temp += 1
+
+          if sum == s:
+              if temp < short_length:
+                  short_length = temp
+                  temp = 1
+                  sum = nums[i]
+
+          elif sum > s:
+              if(sum - s) < nums[i]:
+                sum = nums[i-1] + nums[i]
+                temp = 2
+              else:
+                  sum = nums[i]
+                  temp = 1
+
+      if short_length == len(nums):
+          short_length = 0
+
+      return short_length
+
 
 print("Minimum Size Subarray Sum 4-21")
 print("<-----------------START---------------<")
