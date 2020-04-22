@@ -1,3 +1,20 @@
+#You 2 integers n and m representing an n by m grid,
+# determine the number of ways you can get from the
+# top-left to the bottom-right of the matrix y going
+# only right or down.
+#4/22/20
+
+def num_ways(n,m):
+    #Fill this in.
+    num_of_ways = 0
+
+
+print("Ways to Traverse a Grid 4-22")
+print("<-----------------START---------------<")
+print(num_ways(2,2))
+print("<-----------------END---------------<")
+
+
 #Given an array of n positive integers and a positive integer s,
 # find the minimal length of a contiguous subarray of which the
 # sum ≥ s. If there isn't one, return 0 instead.
@@ -34,7 +51,7 @@ class Solution:
                   sum = nums[i]
                   temp = 1
 
-      if short_length == len(nums) or short_length == 1:
+      if short_length == len(nums):
           short_length = 0
 
       return short_length
