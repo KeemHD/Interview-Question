@@ -7,7 +7,21 @@
 def num_ways(n,m):
     #Fill this in.
     num_of_ways = 0
+    grid = [[0]*n]*m
 
+    for i in range(m):
+        grid[i][0] = 1
+
+    for i in range(n):
+        grid[0][i] = 1
+
+    for i in range(1,m):
+        for x in range(1,n):
+            grid[i][x] = grid[i-1][x] + grid[i][x-1]
+
+    num_of_ways = grid[m-1][n-1]
+
+    return num_of_ways
 
 print("Ways to Traverse a Grid 4-22")
 print("<-----------------START---------------<")
