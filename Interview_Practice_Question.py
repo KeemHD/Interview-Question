@@ -1,3 +1,41 @@
+#You are given two singly linked lists.
+# The lists intersect at some node. Find,
+# and return the node. Note: the lists are non-cyclical.
+#4/23/20
+
+def intersection(a, b):
+    # fill this in.
+    return a
+
+
+class Node(object):
+  def __init__(self, val):
+    self.val = val
+    self.next = None
+
+  def prettyPrint(self):
+    c = self
+    while c:
+      print(c.val)
+      c = c.next
+
+a = Node(1)
+a.next = Node(2)
+a.next.next = Node(3)
+a.next.next.next = Node(4)
+
+b = Node(6)
+b.next = a.next.next
+
+print("Intersection of Linked List 4-23")
+print("<-----------------START---------------<")
+c = intersection(a, b)
+c.prettyPrint()
+# 3 4
+print("<-----------------END---------------<")
+
+
+
 #You 2 integers n and m representing an n by m grid,
 # determine the number of ways you can get from the
 # top-left to the bottom-right of the matrix y going
@@ -735,6 +773,7 @@ class Solution:
 
             if new_list is None:
                 new_list = ListNode(total)
+
             elif new_list.next is None:
                 new_list.next = ListNode(total)
             else:
@@ -742,6 +781,7 @@ class Solution:
 
             l1 = l1.next
             l2 = l2.next
+
 
         return new_list
 
