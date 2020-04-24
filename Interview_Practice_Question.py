@@ -763,6 +763,7 @@ class Solution:
     def addTwoNumbers(self, l1, l2, c = 0):
         # Fill this in.
         new_list = None
+        
 
         while l1 is not None:
             total = l1.val + l2.val+ c
@@ -773,17 +774,17 @@ class Solution:
 
             if new_list is None:
                 new_list = ListNode(total)
+                head = new_list
 
-            elif new_list.next is None:
-                new_list.next = ListNode(total)
             else:
-                new_list.next.next = ListNode(total)
+                new_list.next = ListNode(total)
+                new_list = new_list.next
 
             l1 = l1.next
             l2 = l2.next
 
 
-        return new_list
+        return head
 
 l1 = ListNode(2)
 l1.next = ListNode(4)
