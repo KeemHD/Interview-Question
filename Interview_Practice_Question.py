@@ -1,3 +1,30 @@
+#Given a string with the initial condition of dominoes, where:
+
+#. represents that the domino is standing still
+#L represents that the domino is falling to the left side
+#R represents that the domino is falling to the right side
+
+#Figure out the final position of the dominoes.
+# If there are dominoes that get pushed on both ends,
+# the force cancels out and that domino remains upright.
+
+#Example:
+#Input:  ..R...L..R.
+#Output: ..RR.LL..RR
+#4/24/20
+
+class Solution(object):
+  def pushDominoes(self, dominoes):
+      # Fill this in.
+      print()
+
+print("Falling Dominoes 4-24")
+print("<-----------------START---------------<")
+print(Solution().pushDominoes('..R...L..R.'))
+# ..RR.LL..RR
+print("<-----------------END---------------<")
+
+
 #You are given two singly linked lists.
 # The lists intersect at some node. Find,
 # and return the node. Note: the lists are non-cyclical.
@@ -444,11 +471,9 @@ def check(num_array):
     status = True
     flag = 0
 
-    for i in range(len(num_array)):
-
-        if i != (len(num_array) -1):
+    for i in range(len(num_array)-1):
             if num_array[i] > num_array[i+1]:
-                flag = flag + 1
+                flag += 1
 
     if flag > 1:
         status = False
