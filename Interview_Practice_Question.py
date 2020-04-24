@@ -522,7 +522,20 @@ print(">-----------------END--------------->")
 
 def two_sum(list, k):
     # Fill this in.
-    print("")
+    status = False
+    sum_list = {}
+
+    for i in list:
+        if i < k:
+            sum_list[i] = k-i
+
+    for x in sum_list.values():
+          if x in sum_list:
+            status = True
+            break
+
+
+    return status
 
 print("Number in List that Adds to Target Numbers 4-9")
 print("<-----------------START---------------<")
