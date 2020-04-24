@@ -16,7 +16,52 @@
 class Solution(object):
   def pushDominoes(self, dominoes):
       # Fill this in.
-      print()
+      output = []
+      modified = False
+
+      for c in dominoes:
+          if len(output) == 0:
+              output.append(c)
+
+          elif c == '.':
+              if output[len(output)-1] == 'R' and not modified:
+                  output.append('R')
+                  modified = True
+
+              else:
+                  output.append(c)
+                  modified = False
+
+          elif c == 'R':
+                  output.append(c)
+                  modified = False
+
+
+          elif c == 'L':
+
+              if output[len(output)-1] == '.' and not modified:
+                 output.pop()
+                 output.append(c)
+                 output.append(c)
+                 modified = False
+
+              elif output[len(output) - 1] == 'R' and not modified:
+                  output.pop()
+                  output.append('.')
+                  output.append('.')
+                  modified = True
+
+              elif modified:
+                  output.append('.')
+                  modified = True
+
+      solution = ""
+
+      for i in range(len(output) - 1):
+          solution+=output[i]
+
+      return solution
+
 
 print("Falling Dominoes 4-24")
 print("<-----------------START---------------<")
