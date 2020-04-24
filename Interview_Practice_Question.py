@@ -541,7 +541,21 @@ print("<-----------------START---------------<")
 
 def sortNums(nums):
     # Fill this in.
-    print("")
+    one = []
+    two = []
+    three = []
+
+    for i in nums:
+        if i == 1:
+            one.append(i)
+        if i == 2:
+            two.append(i)
+        if i == 3:
+            three.append(i)
+
+    results = one+two+three
+
+    return results
 
 print("Sort a List 4-8")
 print("<-----------------START---------------<")
@@ -632,17 +646,19 @@ print("<-----------------END---------------<")
 
 class Solution:
   def getRange(self, arr, target):
-
       # Fill this in.
-      first = -1
-      last = -1
+      first = None
+      last = None
 
       for i in range(len(arr)):
           if arr[i] == target:
-              if first == -1:
+              if first == None:
                   first = i
               else:
                   last = i
+
+
+
 
       return first,last
 
