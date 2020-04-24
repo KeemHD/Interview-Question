@@ -671,9 +671,37 @@ print("<-----------------END---------------<")
 
 class Solution:
   def isValid(self, s):
-    # Fill this in.
-    print("")
+      # Fill this in.
+      brackets = []
+      status = False
 
+      for c in s:
+          if c == '(':
+              brackets.append(c)
+
+          elif c == '{':
+              brackets.append(c)
+
+          elif c == '[':
+              brackets.append(c)
+
+          elif c == ')' and len(brackets) > 0:
+              if brackets[len(brackets)-1] == '(':
+                  brackets.pop()
+
+          elif c == '}' and len(brackets) > 0:
+              if brackets[len(brackets) - 1] == '{':
+                  brackets.pop()
+
+          elif c == ']' and len(brackets) > 0:
+              if brackets[len(brackets) - 1] == '[':
+                  brackets.pop()
+
+
+      if len(brackets) == 0:
+          status = True
+
+      return status
 # Test Program
 print("Corresponding Brackets Question 4-5")
 print("<-----------------START---------------<")
@@ -763,7 +791,7 @@ class Solution:
     def addTwoNumbers(self, l1, l2, c = 0):
         # Fill this in.
         new_list = None
-        
+
 
         while l1 is not None:
             total = l1.val + l2.val+ c
