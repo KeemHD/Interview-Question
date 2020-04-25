@@ -24,7 +24,7 @@ class Solution(object):
               output.append(c)
 
           elif c == '.':
-              if output[len(output)-1] == 'R' and not modified:
+              if output[len(output)-1] == 'R'and not modified:
                   output.append('R')
                   modified = True
 
@@ -57,7 +57,7 @@ class Solution(object):
 
       solution = ""
 
-      for i in range(len(output) - 1):
+      for i in range(len(output)):
           solution+=output[i]
 
       return solution
