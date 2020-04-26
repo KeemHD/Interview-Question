@@ -138,7 +138,27 @@ print("<-----------------END---------------<")
 
 def intersection(a, b):
     # fill this in.
-    return a
+    a_dict = {}
+    current = None
+
+
+    while a:
+        a_dict[a.val] = a
+        a = a.next
+
+    while b:
+        if b.val in a_dict:
+            if current == None:
+                current = a_dict[b.val]
+                head = current
+            else:
+                current = a_dict[b.val]
+
+        b = b.next
+
+
+    return head
+
 
 
 class Node(object):
