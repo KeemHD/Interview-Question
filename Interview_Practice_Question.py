@@ -14,7 +14,31 @@ class Node:
 
 def removeConsecutiveSumTo0(node):
     # Fill this in.
-    head = None
+    head = node
+
+    my_dict = {}
+    sum = 0
+
+    while node:
+        temp =0
+        sum += node.value
+
+        if sum in my_dict:
+            remove = my_dict[sum].next
+            temp = sum
+
+            while remove != node:
+                temp += remove.value
+                my_dict.pop(temp)
+                remove = remove.next
+
+            my_dict[sum].next = node.next
+
+
+        else:
+            my_dict[sum] = node
+
+        node = node.next
 
     return head
 
