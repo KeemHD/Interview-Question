@@ -17,9 +17,28 @@ class Node:
 
 def remove_kth_from_linked_list(head, k):
     # Fill this in
+    cur = head
+    prev = head
+    output = prev
+
     while head:
+        if head.val == k:
+            if prev.val == k:
+                prev = head.next
+                cur = head.next
+                output = prev
+
+            else:
+                prev.next = cur.next
+
+        else:
+            prev = cur
+            cur = head.next
 
         head = head.next
+
+    return output
+
 
 print("Remove k-th Last Element From Linked List 4-26")
 print("<-----------------START---------------<")
