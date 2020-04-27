@@ -1,3 +1,20 @@
+#There are n people lined up, and each have a
+# height represented as an integer. A murder
+# has happened right in front of them, and only
+# people who are taller than everyone in front of
+# them are able to see what has happened. How many witnesses are there?
+#4/27/20
+
+def witnesses(heights):
+  # Fill this in.
+
+print("Witness of The Tall People 4-27")
+print("<-----------------START---------------<")
+print witnesses([3, 6, 3, 4, 1])
+# 3
+print("<-----------------END---------------<")
+
+
 #You are given a singly linked list and an integer k.
 # Return the linked list, removing the k-th last element from the list.
 #Try to do it in a single pass and using constant space.
