@@ -6,11 +6,35 @@
 #4/27/20
 
 def witnesses(heights):
-  # Fill this in.
+    #Fill this in.
+    w_list = []
+    w_list.append(heights[0])
+
+    for i in range(len(heights)):
+        if w_list[len(w_list) - 1] == heights[i]:
+            w_list.pop
+
+        elif w_list[len(w_list) - 1] < heights[i]:
+            while w_list[len(w_list) - 1] < heights[i]:
+                w_list.pop()
+                if len(w_list) == 0 or w_list[len(w_list) - 1] > heights[i]:
+                    w_list.append(heights[i])
+
+
+        else:
+            w_list.append(heights[i])
+
+
+    print("Every actual witnness -> "+ str(w_list))
+
+    return len(w_list)
+
+
 
 print("Witness of The Tall People 4-27")
 print("<-----------------START---------------<")
-print witnesses([3, 6, 3, 4, 1])
+print("Everyone at the murder-> "+str([3, 6, 3, 4, 1]))
+print("Total witnesses count -> "+ str(witnesses([3, 6, 3, 4, 1])))
 # 3
 print("<-----------------END---------------<")
 
