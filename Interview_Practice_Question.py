@@ -14,7 +14,44 @@
 
 def courses_to_take(course_to_prereqs):
   # Fill this in.
-  print()
+  class_order_list = []
+  flag = False
+
+
+  for x, y in course_to_prereqs.items():
+      if len(class_order_list) == 0:
+          class_order_list.append(x)
+          print("append -> "+ x)
+
+      elif len(y) == 0:
+          class_order_list.insert(0,x)
+          print("inserting @0->" + x)
+
+      else:
+          for i in range(len(class_order_list)):
+              for c in course_to_prereqs[class_order_list[i]]:
+                  if c == x:
+                      class_order_list.insert(i,x)
+                      flag = True
+                      print("if insert @ "+ str(i)+"-> " + x )
+
+                  else:
+                      print("Not inserting @ "+ str(i)+"-> " + x)
+
+              if not flag and i == len(class_order_list) -1:
+                  class_order_list.append(x)
+                  print("end appending -> "+ x)
+                  flag = True
+
+              if flag:
+                  flag = False
+                  break
+
+  if len(class_order_list) != len(course_to_prereqs):
+      class_order_list.clear()
+
+
+  return class_order_list
 
 courses = {
   'CSC300': ['CSC100', 'CSC200'],
