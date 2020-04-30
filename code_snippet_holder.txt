@@ -1,0 +1,33 @@
+
+  for x, y in course_to_prereqs.items(): #x is the key y is the value of the classes
+      if len(class_order_list) == 0:
+          class_order_list.append(x)
+          #print("append -> "+ x)
+
+      elif len(y) == 0:
+          class_order_list.insert(0,x)
+          #print("inserting @0->" + x)
+
+      else:
+          for i in range(len(class_order_list)):  #i is index of class order list
+              for c in course_to_prereqs[class_order_list[i]]: #c is courses req for each class
+                  if c == x:
+                      class_order_list.insert(i, x)
+                      print("inserting")
+                      print(x)
+                      is_inserted = True
+
+                      for z in course_to_prereqs[class_order_list[i]]:
+                          if z == class_order_list[i+1]:
+                              fatal = True
+
+              if not is_inserted and i == len(class_order_list) -1:
+                  class_order_list.append(x)
+                  is_inserted = True
+
+              if is_inserted:
+                  end_appended = False
+                  break
+
+  if fatal:
+      class_order_list.clear()
