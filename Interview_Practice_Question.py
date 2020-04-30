@@ -15,11 +15,10 @@ class Solution:
 
 nums = [0, 0, 0, 2, 0, 1, 3, 4, 0, 0]
 Solution().moveZeros(nums)
-print("Course Prerequisites 4-28")
+print("Move Zeros 4-29")
 print("<-----------------START---------------<")
 print(nums)
 # [2, 1, 3, 4, 0, 0, 0, 0, 0, 0]
-print("Move Zeros 4-29")
 print("<-----------------END---------------<")
 
 #You are given a hash table where the key is a course code,
