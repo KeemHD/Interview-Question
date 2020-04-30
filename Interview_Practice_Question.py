@@ -5,7 +5,17 @@
 
 def findKthLargest(nums, k):
     # Fill this in.
-    print()
+    largest = 0
+    index = 0
+
+    while index <= k:
+        if nums[index] > largest:
+            largest = nums[index]
+
+        index += 1
+
+    return largest
+
 
 print("k-th largest element 4-30")
 print("<-----------------START---------------<")
