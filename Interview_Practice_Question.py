@@ -13,48 +13,50 @@
 #4/28/20
 
 def courses_to_take(course_to_prereqs):
-  # Fill this in.
-  class_order_list = []
-  flag = False
+    # Fill this in.
+    class_order_list = []
+    is_inserted = False
+    fatal = False
+
+    for course, req in course_to_prereqs.items():
+        if len(class_order_list) == 0:
+            class_order_list.append(course)
+            print("empty list appending -> "+ str(course))
+
+        elif len(req) == 0:
+            class_order_list.insert(0,course)
+            print("Front append -> "+ str(course))
+
+        else:
+            for i in range(len(class_order_list)):
+                for r in course_to_prereqs[class_order_list[i]]:
+                    if r == course and not is_inserted:
+                        for w in req:
+                            if w == class_order_list[i]:
+                                print("invalid")
+                                fatal = True
+
+                        class_order_list.insert(i,course)
+                        print("inserting -> "+ str(i) + " "+ str(course))
+                        is_inserted = True
+                        break
+
+                if is_inserted:
+                    #is_inserted = False
+                    break
+
+                class_order_list.append(course)
+                print("appending at end -> "+ str(course))
 
 
-  for x, y in course_to_prereqs.items():
-      if len(class_order_list) == 0:
-          class_order_list.append(x)
-          #print("append -> "+ x)
-
-      elif len(y) == 0:
-          class_order_list.insert(0,x)
-          #print("inserting @0->" + x)
-
-      else:
-          for i in range(len(class_order_list)):
-              for c in course_to_prereqs[class_order_list[i]]:
-                  if c == x:
-                      class_order_list.insert(i,x)
-                      flag = True
-                      #print("if insert @ "+ str(i)+"-> " + x )
-
-                  else:
-                      print()
-                      #print("Not inserting @ "+ str(i)+"-> " + x)
-
-              if not flag and i == len(class_order_list) -1:
-                  class_order_list.append(x)
-                  #print("end appending -> "+ x)
-                  flag = True
-
-              if flag:
-                  flag = False
-                  break
-
-  if len(class_order_list) != len(course_to_prereqs):
-      class_order_list.clear()
+    if fatal:
+        class_order_list.clear()
 
 
-  return class_order_list
+    return class_order_list
 
 courses = {
+  'CSC400': ['CSC100'],
   'CSC300': ['CSC100', 'CSC200'],
   'CSC200': ['CSC100'],
   'CSC100': []
