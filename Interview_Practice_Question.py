@@ -21,11 +21,11 @@ def courses_to_take(course_to_prereqs):
     for course, req in course_to_prereqs.items():
         if len(class_order_list) == 0:
             class_order_list.append(course)
-            print("empty list appending -> "+ str(course))
+            #print("empty list appending -> "+ str(course))
 
         elif len(req) == 0:
             class_order_list.insert(0,course)
-            print("Front append -> "+ str(course))
+            #print("Front append -> "+ str(course))
 
         else:
             for i in range(len(class_order_list)):
@@ -33,20 +33,21 @@ def courses_to_take(course_to_prereqs):
                     if r == course and not is_inserted:
                         for w in req:
                             if w == class_order_list[i]:
-                                print("invalid")
+                                print("invalid course list")
                                 fatal = True
 
                         class_order_list.insert(i,course)
-                        print("inserting -> "+ str(i) + " "+ str(course))
+                        #print("inserting -> "+ str(i) + " "+ str(course))
                         is_inserted = True
                         break
 
                 if is_inserted:
-                    #is_inserted = False
+                    is_inserted = False
                     break
 
-                class_order_list.append(course)
-                print("appending at end -> "+ str(course))
+                elif not is_inserted and i == len(class_order_list) -1:
+                    class_order_list.append(course)
+                    #print("appending at end -> "+ str(course))
 
 
     if fatal:
@@ -56,7 +57,6 @@ def courses_to_take(course_to_prereqs):
     return class_order_list
 
 courses = {
-  'CSC400': ['CSC100'],
   'CSC300': ['CSC100', 'CSC200'],
   'CSC200': ['CSC100'],
   'CSC100': []
