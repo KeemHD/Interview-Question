@@ -1,3 +1,18 @@
+#Given a list, find the k-th largest element in the list.
+#Input: list = [3, 5, 2, 4, 6, 8], k = 3
+#Output: 5
+#4/30/20
+
+def findKthLargest(nums, k):
+    # Fill this in.
+    print()
+
+print("k-th largest element 4-30")
+print("<-----------------START---------------<")
+print(findKthLargest([3, 5, 2, 4, 6, 8], 3))
+# 5
+print("<-----------------END---------------<")
+
 #Given an array nums, write a function to move all 0's
 # to the end of it while maintaining the relative order
 # of the non-zero elements.
