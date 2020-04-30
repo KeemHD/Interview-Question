@@ -24,15 +24,27 @@ print("<-----------------END---------------<")
 #4/29/20
 
 class Solution:
-  def moveZeros(self, nums):
-    # Fill this in.
-    print()
+    def moveZeros(self, nums):
+        # Fill this in.
+        temp = 0
+
+        for i in range(len(nums)):
+            if nums[i] != 0:
+                temp = nums[i]
+                for n in range(len(nums)):
+                    if(nums[n] == 0):
+                        nums[i] = nums[n]
+                        nums[n] = temp
+                        break
+
+
 
 nums = [0, 0, 0, 2, 0, 1, 3, 4, 0, 0]
-Solution().moveZeros(nums)
 print("Move Zeros 4-29")
 print("<-----------------START---------------<")
-print(nums)
+print("pre-> "+str(nums))
+Solution().moveZeros(nums)
+print("post-> "+str(nums))
 # [2, 1, 3, 4, 0, 0, 0, 0, 0, 0]
 print("<-----------------END---------------<")
 
