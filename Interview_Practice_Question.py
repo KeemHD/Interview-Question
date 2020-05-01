@@ -1,3 +1,30 @@
+#You are given a 2D array of integers.
+# Print out the clockwise spiral traversal of the matrix.
+#Example:
+#grid = [[1,  2,  3,  4,  5],
+#        [6,  7,  8,  9,  10],
+#        [11, 12, 13, 14, 15],
+#        [16, 17, 18, 19, 20]]
+#The clockwise spiral traversal of this array is:
+#1, 2, 3, 4, 5, 10, 15, 20, 19, 18, 17, 16, 11, 6, 7, 8, 9, 14, 13, 12
+#5/01/20
+
+def matrix_spiral_print(M):
+    #Fill this in.
+    print()
+
+
+print("Spiral Traversal of Grid 5-01")
+print("<-----------------START---------------<")
+grid = [[1,  2,  3,  4,  5],
+        [6,  7,  8,  9,  10],
+        [11, 12, 13, 14, 15],
+        [16, 17, 18, 19, 20]]
+matrix_spiral_print(grid)
+# 1 2 3 4 5 10 15 20 19 18 17 16 11 6 7 8 9 14 13 12
+print("<-----------------END---------------<")
+
+
 #Given a list, find the k-th largest element in the list.
 #Input: list = [3, 5, 2, 4, 6, 8], k = 3
 #Output: 5
