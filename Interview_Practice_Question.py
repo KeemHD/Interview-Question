@@ -1,3 +1,23 @@
+#You are given an array of integers. Return the
+# largest product that can be made by multiplying
+# any 3 integers in the array.
+#Example:
+#[-4, -4, 2, 8] should return 128 as the largest
+# product can be made by multiplying -4 * -4 * 8 = 128.
+#5/2/20
+
+def maximum_product_of_three(lst):
+    # Fill this in.
+    print()
+
+
+print("Largest Product of 3 Elements 5-01")
+print("<-----------------START---------------<")
+print(maximum_product_of_three([-4, -4, 2, 8]))
+# 128
+print("<-----------------END---------------<")
+
+
 #You are given a 2D array of integers.
 # Print out the clockwise spiral traversal of the matrix.
 #Example:
@@ -11,15 +31,23 @@
 
 def matrix_spiral_print(M):
     #Fill this in.
-    print()
+    trav_list = []
+    start_row = 0
+    start_colum = 0
+
+
+    print(trav_list)
 
 
 print("Spiral Traversal of Grid 5-01")
 print("<-----------------START---------------<")
-grid = [[1,  2,  3,  4,  5],
+'''grid = [[1,  2,  3,  4,  5],
         [6,  7,  8,  9,  10],
         [11, 12, 13, 14, 15],
-        [16, 17, 18, 19, 20]]
+        [16, 17, 18, 19, 20]]'''
+grid = [[1,2,3],
+        [4,5,6],
+        [7,8,9]]
 matrix_spiral_print(grid)
 # 1 2 3 4 5 10 15 20 19 18 17 16 11 6 7 8 9 14 13 12
 print("<-----------------END---------------<")
