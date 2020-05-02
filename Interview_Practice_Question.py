@@ -8,12 +8,32 @@
 
 def maximum_product_of_three(lst):
     # Fill this in.
-    print()
+    one = 0
+    two = 0
+    three = 0
+
+    for i in range(len(lst)):
+        value = abs(lst[i])
+
+        if value > one:
+            three = two
+            two = one
+            one = value
+
+        elif value > two:
+            three = two
+            two = value
+
+        elif value > three:
+            three = value
+
+
+    return one*two*three
 
 
 print("Largest Product of 3 Elements 5-01")
 print("<-----------------START---------------<")
-print(maximum_product_of_three([-4, -4, 2, 8]))
+print(maximum_product_of_three([-4, -4, 2,8]))
 # 128
 print("<-----------------END---------------<")
 
