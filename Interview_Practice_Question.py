@@ -33,7 +33,7 @@ def maximum_product_of_three(lst):
 
 print("Largest Product of 3 Elements 5-01")
 print("<-----------------START---------------<")
-print(maximum_product_of_three([-4, -4, 2,8]))
+print(maximum_product_of_three([-4, -4, 2, 8]))
 # 128
 print("<-----------------END---------------<")
 
@@ -54,6 +54,8 @@ def matrix_spiral_print(M):
     trav_list = []
     start_row = 0
     start_colum = 0
+
+
 
 
     print(trav_list)
@@ -1202,17 +1204,55 @@ print("<-----------------END---------------<")
 
 class Solution:
     def longestPalindrome(self, s):
-      # Fill this in.
-      for i in range(len(s)):
-          print(s[i])
+        # Fill this in.
+        found = False
+        start_of_pal = 0
+        end_of_pal = 0
+        output_list = []
+
+        for i in range(len(s)):
+            if not found:
+                for n in range(len(s)):
+                    end = (len(s)-1) - n
+                    if s[i] == s[end] and i != end:
+                        found = Solution.pal_check(self, i,end,s)
+                        if found:
+                            start_of_pal = i
+                            end_of_pal = end
+                            break
+            else:
+                break
+
+        while start_of_pal <= end:
+            output_list.append(s[start_of_pal])
+            start_of_pal += 1
+
+        return output_list
+
+
+    def pal_check(self, start, end,s):
+        status = True
+
+        while start < end:
+            if s[start] != s[end]:
+                status = False
+
+            start +=1
+            end -= 1
+
+        return status
+
+
 
 
 print("Longest Palindromic Substring 4-4")
 print("<-----------------START---------------<")
 # Test program
+   # 0123456789
 s = "tracecars"
 print(str(Solution().longestPalindrome(s)))
 # racecar
+
 # find the longest palindromic substring in s.
 print("<-----------------End---------------<")
 
