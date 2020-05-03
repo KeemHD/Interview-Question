@@ -1,3 +1,27 @@
+#You are given an array of intervals - that is,
+# an array of tuples (start, end). The array may
+# not be sorted, and could contain overlapping
+# intervals. Return another array where the
+# overlapping intervals are merged.
+#For example:
+#[(1, 3), (5, 8), (4, 10), (20, 25)]
+#This input should return
+# [(1, 3), (4, 10), (20, 25)]
+# since (5, 8) and (4, 10) can be merged into (4, 10).
+#5/3/20
+
+def merge(intervals):
+    #Fill this in.
+    print()
+
+print("Merge Overlapping Intervals 5-03")
+print("<-----------------START---------------<")
+print(merge([(1, 3), (5, 8), (4, 10), (20, 25)]))
+# [(1, 3), (4, 10), (20, 25)]
+print("<-----------------END---------------<")
+
+
+
 #You are given an array of integers. Return the
 # largest product that can be made by multiplying
 # any 3 integers in the array.
@@ -31,7 +55,7 @@ def maximum_product_of_three(lst):
     return one*two*three
 
 
-print("Largest Product of 3 Elements 5-01")
+print("Largest Product of 3 Elements 5-02")
 print("<-----------------START---------------<")
 print(maximum_product_of_three([-4, -4, 2, 8]))
 # 128
