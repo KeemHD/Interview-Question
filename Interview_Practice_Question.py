@@ -12,7 +12,39 @@
 
 def merge(intervals):
     #Fill this in.
-    print()
+    output = []
+    temp = ()
+    appended = False
+    temp = intervals[0]
+    output.append(temp)
+
+    for n in intervals:
+        start = n[0]
+        end = n[1]
+
+
+        for i in intervals:
+            if start > i[0] and end < i[1]:
+                start = i[0]
+                end = i[1]
+                temp = i
+                output.append(temp)
+                appended = True
+                break
+
+        if not appended:
+            if start != output[len(output)-1][0] and end != output[len(output)-1][1]:
+                temp = n
+                output.append(temp)
+                appended = False
+
+        else:
+            appended = False
+
+    return output
+
+
+
 
 print("Merge Overlapping Intervals 5-03")
 print("<-----------------START---------------<")
