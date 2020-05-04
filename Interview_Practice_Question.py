@@ -13,7 +13,6 @@
 def merge(intervals):
     #Fill this in.
     output = []
-    temp = ()
     appended = False
     temp = intervals[0]
     output.append(temp)
@@ -27,15 +26,13 @@ def merge(intervals):
             if start > i[0] and end < i[1]:
                 start = i[0]
                 end = i[1]
-                temp = i
-                output.append(temp)
+                output.append(i)
                 appended = True
                 break
 
         if not appended:
             if start != output[len(output)-1][0] and end != output[len(output)-1][1]:
-                temp = n
-                output.append(temp)
+                output.append(n)
                 appended = False
 
         else:
