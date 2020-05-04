@@ -1,3 +1,24 @@
+#You are given an array. Each element represents
+# the price of a stock on that particular day.
+# Calculate and return the maximum profit you
+# can make from buying and selling that stock only once.
+#For example: [9, 11, 8, 5, 7, 10]
+#Here, the optimal trade is to buy when the price is 5,
+# and sell when it is 10, so the return value should be 5
+# (profit = 10 - 5 = 5).
+#5/4/20
+
+def buy_and_sell(arr):
+    #Fill this in.
+    print()
+
+print("Maximum Profit From Stocks 5-04")
+print("<-----------------START---------------<")
+print(buy_and_sell([9, 11, 8, 5, 7, 10]))
+# 5
+print("<-----------------END---------------<")
+
+
 #You are given an array of intervals - that is,
 # an array of tuples (start, end). The array may
 # not be sorted, and could contain overlapping
