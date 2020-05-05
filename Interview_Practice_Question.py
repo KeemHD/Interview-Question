@@ -1,3 +1,37 @@
+#Implement a queue class using two stacks.
+# A queue is a data structure that supports
+# the FIFO protocol (First in = first out).
+# Your class should support the enqueue and
+# dequeue methods like a standard queue.
+#5/5/20
+
+class Queue:
+    def __init__(self):
+        #Fill this in.
+        print()
+
+    def enqueue(self, val):
+        #Fill this in.
+        print()
+
+    def dequeue(self):
+        #Fill this in.
+        print()
+
+
+q = Queue()
+q.enqueue(1)
+q.enqueue(2)
+q.enqueue(3)
+print("Queue Using Two Stacks 5-05")
+print("<-----------------START---------------<")
+print(q.dequeue())
+print(q.dequeue())
+print(q.dequeue())
+# 1 2 3
+print("<-----------------END---------------<")
+
+
 #You are given an array. Each element represents
 # the price of a stock on that particular day.
 # Calculate and return the maximum profit you
