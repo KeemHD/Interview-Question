@@ -10,7 +10,25 @@
 
 def buy_and_sell(arr):
     #Fill this in.
-    print()
+    buy = arr[0]
+    diff = 0
+    profit_list = []
+
+    for i in range(len(arr)):
+        sell = arr[i]
+
+        if buy > arr[i]:
+            buy = arr[i]
+            diff = 0
+
+        if sell > buy:
+            sell = arr[i]
+            diff += sell - buy
+            profit_list.append(diff)
+            diff = 0
+
+
+    return max(profit_list)
 
 print("Maximum Profit From Stocks 5-04")
 print("<-----------------START---------------<")
