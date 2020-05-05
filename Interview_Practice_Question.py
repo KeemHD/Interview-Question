@@ -6,23 +6,31 @@
 #5/5/20
 
 class Queue:
+
     def __init__(self):
         #Fill this in.
-        print()
+        self.list = []
+
 
     def enqueue(self, val):
         #Fill this in.
-        print()
+        self.list.append(val)
+
 
     def dequeue(self):
         #Fill this in.
-        print()
+        data = self.list[0]
+        self.list.pop(0)
+
+        return data
 
 
 q = Queue()
 q.enqueue(1)
 q.enqueue(2)
 q.enqueue(3)
+
+
 print("Queue Using Two Stacks 5-05")
 print("<-----------------START---------------<")
 print(q.dequeue())
