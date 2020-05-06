@@ -186,21 +186,64 @@ print("<-----------------END---------------<")
 def matrix_spiral_print(M):
     #Fill this in.
     trav_list = []
-    start_row = 0
-    start_colum = 0
+    flag = False
+
+    vertical = len(M)-1
+    horizontal = len(M[0])-1
+    row = 0
+    colum = 0
+
+    while horizontal >= 0 and vertical >= 0:
+        if horizontal == 0:
+            horizontal = 1
+        if row >=0 and colum >=0:
+            for i in range(horizontal): # horizontal right
+                trav_list.append(M[row][colum])
+                colum += 1
+
+                if horizontal == 1 and flag:
+                    horizontal = 0
+
+            row = colum - horizontal
+
+        if row >=0 and colum >=0:
+            for i in range(vertical): # vertical down
+                trav_list.append(M[row][colum])
+                row += 1
 
 
+        if row >= 0 and colum >= 0:
+            for i in range(horizontal): # horizontal left
+                #print(M[row][colum])
+                trav_list.append(M[row][colum])
+                colum -= 1
 
+
+        if row >= 0 and colum >= 0:
+            for i in range(vertical): # vertical up
+                trav_list.append(M[row][colum])
+                row -= 1
+
+
+        row += 1
+        colum += 1
+        vertical -= colum
+        horizontal -= row
+        vertical-=1
+        horizontal-=1
+        flag = True
 
     print(trav_list)
 
 
 print("Spiral Traversal of Grid 5-01")
 print("<-----------------START---------------<")
-'''grid = [[1,  2,  3,  4,  5],
+grid = [[1,  2,  3,  4,  5],
         [6,  7,  8,  9,  10],
         [11, 12, 13, 14, 15],
-        [16, 17, 18, 19, 20]]'''
+        [16, 17, 18, 19, 20]]
+matrix_spiral_print(grid)
+
 grid = [[1,2,3],
         [4,5,6],
         [7,8,9]]
