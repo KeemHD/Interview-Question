@@ -1,3 +1,24 @@
+#You are given an array of integers.
+# Find the maximum sum of all possible
+# contiguous subarrays of the array.
+#Example:
+#[34, -50, 42, 14, -5, 86]
+#Given this input array, the output should be 137.
+# The contiguous subarray with the largest sum is [42, 14, -5, 86].
+#Your solution should run in linear time.
+#5/6/20
+
+def max_subarray_sum(arr):
+    # Fill this in.
+    print()
+
+print("Contiguous Subarray with Maximum Sum 5-06")
+print("<-----------------START---------------<")
+print(max_subarray_sum([34, -50, 42, 14, -5, 86]))
+# 137
+print("<-----------------END---------------<")
+
+
 #Implement a queue class using two stacks.
 # A queue is a data structure that supports
 # the FIFO protocol (First in = first out).
@@ -196,6 +217,7 @@ def matrix_spiral_print(M):
     while horizontal >= 0 and vertical >= 0:
         if horizontal == 0:
             horizontal = 1
+
         if row >=0 and colum >=0:
             for i in range(horizontal): # horizontal right
                 trav_list.append(M[row][colum])
