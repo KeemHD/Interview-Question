@@ -18,7 +18,42 @@ class Node(object):
 
 def merge(lists):
     # Fill this in.
-    print()
+    locator = None
+    a = lists[0]
+    b = lists[1]
+
+    if a.val < b.val:
+        root = a
+        a = a.next
+
+    else:
+        root = b
+        b = b.next
+
+    locator = root
+
+    while a and b:
+        if a.val < b.val:
+            root.next = a
+            a = a.next
+            root = root.next
+
+        else:
+            root.next = b
+            b = b.next
+            root = root.next
+
+    while a:
+        root.next = a
+        a = a.next
+        root = root.next
+
+    while b:
+        root.next = b
+        b = b.next
+        root = root.next
+
+    return locator
 
 a = Node(1, Node(3, Node(5)))
 b = Node(2, Node(4, Node(6)))
