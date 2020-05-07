@@ -10,11 +10,27 @@
 
 def max_subarray_sum(arr):
     # Fill this in.
-    print()
+    max_sum = 0
+    output = []
+
+    for n in arr:
+        if len(output) == 0 and n > 0:
+            output.append(n)
+
+        elif (output[-1]+n) < 0:
+            output.clear()
+
+        else:
+            output.append(output[-1]+n)
+
+    if len(output) == 0:
+        output.append(0)
+
+    return max(output)
 
 print("Contiguous Subarray with Maximum Sum 5-06")
 print("<-----------------START---------------<")
-print(max_subarray_sum([34, -50, 42, 14, -5, 86]))
+print(max_subarray_sum([34, -50, 42, 14, -5, 86, -100]))
 # 137
 print("<-----------------END---------------<")
 
