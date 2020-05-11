@@ -27,11 +27,36 @@ class Solution:
 
 print("Buddy Strings Tree 5-10")
 print("<-----------------START---------------<")
-print Solution().buddyStrings('aaaaaaabc', 'aaaaaaacb')
+print(Solution().buddyStrings('aaaaaaabc', 'aaaaaaacb'))
 # True
-print Solution().buddyStrings('aaaaaabbc', 'aaaaaaacb')
+print(Solution().buddyStrings('aaaaaabbc', 'aaaaaaacb'))
 # False
 print("<-----------------END---------------<")
+
+#You have a landscape, in which puddles can form.
+# You are given an array of non-negative integers
+# representing the elevation at each location.
+# Return the amount of water that would accumulate if it rains.
+
+#For example: [0,1,0,2,1,0,1,3,2,1,2,1] should
+# return 6 because 6 units of water can get trapped here.
+
+#       X
+#   X███XX█X
+# X█XX█XXXXXX
+# [0,1,0,2,1,0,1,3,2,1,2,1]
+#4/9/20
+
+def capacity(arr):
+    # Fill this in.
+    print()
+
+print("Trapping Rainwater 5-09")
+print("<-----------------START---------------<")
+print(capacity([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]))
+# 6
+print("<-----------------END---------------<")
+
 
 #Given a sorted list of numbers, change it
 # into a balanced binary search tree.
