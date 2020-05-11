@@ -1,7 +1,44 @@
+#Given two strings A and B of lowercase letters,
+# return true if and only if we can swap two
+# letters in A so that the result equals B.
+
+#Example 1:
+#Input: A = "ab", B = "ba"
+#Output: true
+#Example 2:
+
+#Input: A = "ab", B = "ab"
+#Output: false
+#Example 3:
+#Input: A = "aa", B = "aa"
+#Output: true
+#Example 4:
+#Input: A = "aaaaaaabc", B = "aaaaaaacb"
+#Output: true
+#Example 5:
+#Input: A = "", B = "aa"
+#Output: false
+#5/10/20
+
+class Solution:
+  def buddyStrings(self, A, B):
+      # Fill this in.
+      print()
+
+print("Buddy Strings Tree 5-10")
+print("<-----------------START---------------<")
+print Solution().buddyStrings('aaaaaaabc', 'aaaaaaacb')
+# True
+print Solution().buddyStrings('aaaaaabbc', 'aaaaaaacb')
+# False
+print("<-----------------END---------------<")
+
 #Given a sorted list of numbers, change it
 # into a balanced binary search tree.
 # You can assume there will be no duplicate numbers in the list.
 #5/8/20
+
+from collections import deque
 
 class Node:
   def __init__(self, value, left=None, right=None):
