@@ -89,7 +89,23 @@ print("<-----------------END---------------<")
 
 def capacity(arr):
     # Fill this in.
-    print()
+    diff = 0
+
+    for i in range(1, len(arr)):
+
+        left = arr[i]
+        for j in range(i):
+            left = max(left, arr[j])
+
+        right = arr[i]
+
+        for j in range(i + 1, len(arr)):
+            right = max(right, arr[j])
+
+        diff = diff + (min(left, right) - arr[i])
+
+    return diff
+
 
 print("Trapping Rainwater 5-09")
 print("<-----------------START---------------<")
