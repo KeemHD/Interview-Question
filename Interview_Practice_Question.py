@@ -122,16 +122,31 @@ class Node:
       answer += str(node.value)
       nodes.append(node.left)
       nodes.append(node.right)
+
     return answer
 
 
 def createBalancedBST(nums):
     # Fill this in.
-    print()
+    if not nums:
+         return None
+
+    mid = int(len(nums)/2)
+    root = Node(nums[mid])
+
+
+    root.left = createBalancedBST(nums[:mid])
+    root.right = createBalancedBST(nums[mid+1:])
+
+    return root
+
 
 print("Create a Balanced Binary Search Tree 5-08")
 print("<-----------------START---------------<")
+tree = createBalancedBST([1, 2, 3, 4, 5, 6, 7])
 print(createBalancedBST([1, 2, 3, 4, 5, 6, 7]))
+#print(tree)
+
 # 4261357
 #   4
 #  / \
