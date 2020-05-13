@@ -19,7 +19,7 @@ def lookSay(n):
 
 print("Look and Say 5-12")
 print("<-----------------START---------------<")
-print(lookSay(input("Enter look/say number: ")))
+print(lookSay(4))#input("Enter look/say number: ")))
 # (d, 3)
 print("<-----------------END---------------<")
 
@@ -50,7 +50,24 @@ class Node(object):
 
 def deepest(node):
     # Fill this in.
-    print()
+    count = 0
+    last = None
+    while node:
+        count +=1
+        if node.left != None:
+            node = node.left
+            last = node
+        elif node.right != None:
+            node = node.right
+            last = node
+        else:
+            node = None
+
+
+
+    tup = (last,count)
+    return tup
+
 
 root = Node('a')
 root.left = Node('b')
