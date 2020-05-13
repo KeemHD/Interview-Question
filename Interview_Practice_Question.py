@@ -1,3 +1,24 @@
+#You are given an array of integers. Return the
+# smallest positive integer that is not present
+# in the array. The array may contain duplicate entries.
+
+#For example, the input [3, 4, -1, 1] should
+# return 2 because it is the smallest positive
+# integer that doesn't exist in the array.
+
+#Your solution should run in linear time and use constant space.
+#5/13/20
+
+def first_missing_positive(nums):
+    # Fill this in.
+    print()
+
+print("First Missing Positive Integer 5-13")
+print("<-----------------START---------------<")
+print(first_missing_positive([3, 4, -1, 1]))
+# 2
+print("<-----------------END---------------<")
+
 #A look-and-say sequence is defined as the integer
 # sequence beginning with a single digit in which
 # the next term is obtained by describing the previous
@@ -13,13 +34,23 @@
 
 #Your task is, return the nth term of this sequence.
 
-def lookSay(n):
-    return n
+def lookSay(list ,n):
+
+    if n == 1:
+        list.append(1)
+        return list
+    if n == 2:
+        list.append(11)
+        return list
+    else:
+        count = 0
+        return lookSay(list,n-1)
+
 
 
 print("Look and Say 5-12")
 print("<-----------------START---------------<")
-print(lookSay(4))#input("Enter look/say number: ")))
+print(lookSay([],4))#input("Enter look/say number: ")))
 # (d, 3)
 print("<-----------------END---------------<")
 
