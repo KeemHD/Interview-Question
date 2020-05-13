@@ -56,11 +56,12 @@ def deepest(node):
         count +=1
         if node.left != None:
             node = node.left
-            last = node
+
         elif node.right != None:
             node = node.right
-            last = node
+
         else:
+            last = node
             node = None
 
 
