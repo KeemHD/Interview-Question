@@ -63,7 +63,41 @@ print("<-----------------END---------------<")
 class Solution:
   def buddyStrings(self, A, B):
       # Fill this in.
-      print()
+      status = True
+      swap_count = 0
+
+      if len(A) == len(B):
+          for i in range(len(A)):
+              if A[i] != B[i]:
+                  A = swap(A,B[i],i)
+                  swap_count+=1
+
+      else:
+          status = False
+
+      if swap_count > 1:
+          status = False
+
+      return status
+
+def swap(a_string, b_val, index_to_chage):
+    new_str = ""
+    temp = a_string[index_to_chage]
+    found = index_to_chage+1
+
+    while found < len(a_string):
+        if a_string[found] == b_val:
+            break
+        found+=1
+
+    if found >= len(a_string):
+        found = len(a_string)-1
+
+    new_str = a_string[:index_to_chage] + b_val + a_string[(index_to_chage+1):found] + temp + a_string[found+1:]
+    #print(new_str + str(len(new_str)))
+
+    return new_str
+
 
 print("Buddy Strings Tree 5-10")
 print("<-----------------START---------------<")
