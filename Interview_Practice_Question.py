@@ -1,3 +1,49 @@
+#You are given the root of a binary search tree.
+# Return true if it is a valid binary search
+# tree, and false otherwise. Recall that a
+# binary search tree has the property that
+# all values in the left subtree are less
+# than or equal to the root, and all values
+# in the right subtree are greater than or equal to the root.
+#5/14/20
+
+class TreeNode:
+  def __init__(self, key):
+    self.left = None
+    self.right = None
+    self.key = key
+
+def is_bst(root):
+    # Fill this in.
+    if root == None:
+        return None
+
+
+
+
+a = TreeNode(5)
+a.left = TreeNode(3)
+a.right = TreeNode(7)
+a.left.left = TreeNode(1)
+a.left.right = TreeNode(4)
+a.right.left = TreeNode(6)
+
+print("Validate Binary Search Tree 5-14")
+print("<-----------------START---------------<")
+print(is_bst(a))
+
+#    5
+#   / \
+#  3   7
+# / \ /
+#1  4 6
+print("<-----------------END---------------<")
+
+
+
+
+
+
 #You are given an array of integers. Return the
 # smallest positive integer that is not present
 # in the array. The array may contain duplicate entries.
@@ -16,6 +62,7 @@ def first_missing_positive(nums):
 print("First Missing Positive Integer 5-13")
 print("<-----------------START---------------<")
 print(first_missing_positive([3, 4, -1, 1]))
+print(first_missing_positive([1,2,4]))
 # 2
 print("<-----------------END---------------<")
 
