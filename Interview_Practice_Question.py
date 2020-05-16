@@ -1,3 +1,24 @@
+#You are given a string s, and an integer k.
+# Return the length of the longest substring in s
+# that contains at most k distinct characters.
+
+#For instance, given the string:
+#aabcdefff and k = 3, then the longest
+# substring with 3 distinct characters would
+# be defff. The answer should be 5.
+#5/16/20
+
+def longest_substring_with_k_distinct_characters(s, k):
+    # Fill this in.
+    print()
+
+print("Longest Substring With K Distinct Characters 5-16")
+print("<-----------------START---------------<")
+print(longest_substring_with_k_distinct_characters('aabcdefff', 3))
+# 5 (because 'defff' has length 5 with 3 characters)
+print("<-----------------END---------------<")
+
+
 #Given a binary tree, return all values given a certain height h.
 #5/15/20
 class Node():
