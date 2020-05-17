@@ -1,3 +1,34 @@
+#A unival tree is a tree where all the nodes
+# have the same value. Given a binary tree,
+# return the number of unival subtrees in the tree.
+
+#For example, the following tree should return 5:
+#5/17/20
+
+class Node(object):
+  def __init__(self, val):
+    self.val = val
+    self.left = None
+    self.right = None
+
+def count_unival_subtrees(root):
+    # Fill this in.
+    print()
+
+a = Node(0)
+a.left = Node(1)
+a.right = Node(0)
+a.right.left = Node(1)
+a.right.right = Node(0)
+a.right.left.left = Node(1)
+a.right.left.right = Node(1)
+
+print("Count Number of Unival Subtrees 5-17")
+print("<-----------------START---------------<")
+print(count_unival_subtrees(a))
+# 5
+print("<-----------------END---------------<")
+
 #You are given a string s, and an integer k.
 # Return the length of the longest substring in s
 # that contains at most k distinct characters.
