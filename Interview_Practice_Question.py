@@ -10,11 +10,47 @@
 
 def longest_substring_with_k_distinct_characters(s, k):
     # Fill this in.
-    print()
+    my_list = []
+    output_list = []
+    count = 0
+    longest = 0
+    temp = 0
+
+    for c in s:
+        if count < k or c in my_list:
+            if c not in my_list:
+                count += 1
+
+            my_list.append(c)
+            temp += 1
+
+        else:
+            if temp > longest:
+                longest = temp
+                temp = 0
+                count = 1
+                output_list = my_list.copy()
+                my_list.clear()
+                my_list.append(c)
+                temp += 1
+
+            else:
+                my_list.clear()
+                my_list.append(c)
+                temp += 1
+
+    if temp > longest:
+        output_list = my_list.copy()
+
+    #for c in output_list:
+        #print(c)
+
+    return len(output_list)
 
 print("Longest Substring With K Distinct Characters 5-16")
 print("<-----------------START---------------<")
 print(longest_substring_with_k_distinct_characters('aabcdefff', 3))
+#print(longest_substring_with_k_distinct_characters('defffaabc', 3))
 # 5 (because 'defff' has length 5 with 3 characters)
 print("<-----------------END---------------<")
 
