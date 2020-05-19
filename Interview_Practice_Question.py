@@ -1,3 +1,54 @@
+#You are given the preorder and inorder traversals of a binary tree in the form of arrays. Write a function that reconstructs the tree represented by these traversals.
+
+#Example:
+#Preorder: [a, b, d, e, c, f, g]
+#Inorder: [d, b, e, a, f, c, g]
+
+#The tree that should be constructed from these traversals is:
+#    a
+#   / \
+#  b   c
+# / \ / \
+#d  e f  g
+#5/18/20
+
+from collections import deque
+
+class Node(object):
+  def __init__(self, val):
+    self.val = val
+    self.left = None
+    self.right = None
+
+  def __str__(self):
+    q = deque()
+    q.append(self)
+    result = ''
+    while len(q):
+      n = q.popleft()
+      result += n.val
+      if n.left:
+        q.append(n.left)
+      if n.right:
+        q.append(n.right)
+
+    return result
+
+
+def reconstruct(preorder, inorder):
+    # Fill this in.
+    print()
+
+tree = reconstruct(['a', 'b', 'd', 'e', 'c', 'f', 'g'],
+                   ['d', 'b', 'e', 'a', 'f', 'c', 'g'])
+
+print("Reconstrunct Binary Tree from Preorder and Inorder Traversals 5-18")
+print("<-----------------START---------------<")
+print(tree)
+# abcdefg
+print("<-----------------END---------------<")
+
+
 #A unival tree is a tree where all the nodes
 # have the same value. Given a binary tree,
 # return the number of unival subtrees in the tree.
@@ -180,7 +231,7 @@ def first_missing_positive(nums):
     print()
 
 print("First Missing Positive Integer 5-13")
-print("<-----------------START---------------<")
+print("<-----------------START---------------<*****************")
 print(first_missing_positive([3, 4, -1, 1]))
 print(first_missing_positive([1,2,4]))
 # 2
