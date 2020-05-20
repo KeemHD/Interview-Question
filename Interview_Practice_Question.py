@@ -19,7 +19,38 @@
 
 def isSorted(words, order):
     # Fill this in.
-    print()
+    status = True
+    count_one = 0
+    count_two = 0
+
+    for i in range(len(words)-1):
+        if len(words[i]) > len(words[i+1]):
+            status = False
+            break
+        else:
+            for x in range(len(words[i])):
+                for c in range(len(order)):
+                    if words[i][x] != order[c]:
+                        count_one += 1
+                    else:
+                        temp = c
+                        break
+
+                for temp in range(len(order)):
+                    if words[i+1][x] != order[c]:
+                        count_two += 1
+                    else:
+                        break
+
+                if count_one > count_two and words[i+1][x] in order:
+                    status = False
+                    break
+                else:
+                    count_one = 0
+                    count_two = 0
+
+
+    return status
 
 print("Word Ordering in a Different Alphabetical Order 5-20")
 print("<-----------------START---------------<")
