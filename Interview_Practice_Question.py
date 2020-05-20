@@ -20,10 +20,46 @@
 
 class Solution:
   def sortColors(self, nums):
-    # Fill this in.
-    print()
-      
-print("Sort Colors 5-18")
+      # Fill this in.
+      ''' red = []
+      white = []
+      blue = []
+
+      for n in nums:
+          if n == 0:
+              red.append(0)
+          elif n == 1:
+              white.append(1)
+          elif n == 2:
+              blue.append(2)
+          else:
+              print(str(n) + " is not red, white, or blue.")
+
+      nums.clear()
+
+      for i in range(len(red)):
+          nums.append(red[i])
+      for i in range(len(white)):
+          nums.append(white[i])
+      for i in range(len(blue)):
+          nums.append(blue[i])
+      '''
+      lo = 0
+      hi = len(nums) - 1
+      mid = 0
+      while mid <= hi:
+          if nums[mid] == 0:
+              nums[lo], nums[mid] = nums[mid], nums[lo]
+              lo += 1
+              mid += 1
+          elif nums[mid] == 1:
+              mid = mid + 1
+          else:
+              nums[mid], nums[hi] = nums[hi], nums[mid]
+              hi -= 1
+
+
+print("Sort Colors 5-19")
 print("<-----------------START---------------<")
 nums = [0, 1, 2, 2, 1, 1, 2, 2, 0, 0, 0, 0, 2, 1]
 print("Before Sort: ")
@@ -269,7 +305,7 @@ def first_missing_positive(nums):
     print()
 
 print("First Missing Positive Integer 5-13")
-print("<-----------------START---------------<*****************")
+print("<-----------------START---------------<")
 print(first_missing_positive([3, 4, -1, 1]))
 print(first_missing_positive([1,2,4]))
 # 2
