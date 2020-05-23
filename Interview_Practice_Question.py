@@ -1,3 +1,26 @@
+#Given an array, nums, of n integers, find all unique triplets
+# (three numbers, a, b, & c) in nums such that a + b + c = 0.
+# Note that there may not be any triplets that sum to zero
+# in nums, and that the triplets must not be duplicates.
+#Example:
+#Input: nums = [0, -1, 2, -3, 1]
+#Output: [0, -1, 1], [2, -3, 1]
+#4/21/20
+
+class Solution(object):
+  def threeSum(self, nums):
+    # Fill this in.
+    print()
+
+# Test Program
+nums = [1, -2, 1, 0, 5]
+print("3 Sum 5-21")
+print("<-----------------START---------------<")
+print(Solution().threeSum(nums))
+# [[-2, 1, 1]]
+print("<-----------------END---------------<")
+
+
 #Given a list of words, and an arbitrary alphabetical order,
 # verify that the words are in order of the alphabetical order.
 
