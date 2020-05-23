@@ -1785,20 +1785,34 @@ class Node:
 
 
 def findCeilingFloor(root_node, k, floor=None, ceil=None):
-
     #Fill this in.
-    root = Node(8)
-    root.left = Node(4)
-    root.right = Node(12)
+    if root_node == None:
+        return -1
+    if root_node.value == k:
+        return k
+    if root_node.value < k:
+        return findCeilingFloor(root_node.right,k,floor,ceil)
 
-    root.left.left = Node(2)
-    root.left.right = Node(6)
+    ceil = findCeilingFloor(root_node.left,k,floor,ceil)
+    floor = root_node.left
+    return (floor.value,ceil) if ceil >= k else root_node.value
 
-    root.right.left = Node(10)
-    root.right.right = Node(14)
 
-print("<-----------------START---------------<")
+
+
+root = Node(8)
+root.left = Node(4)
+root.right = Node(12)
+
+root.left.left = Node(2)
+root.left.right = Node(6)
+
+root.right.left = Node(10)
+root.right.right = Node(14)
+
+
 print("Binary Tree floor and ceiling find 4-12")
+print("<-----------------START---------------<")
 print(findCeilingFloor(root, 5))
 # (4, 6)
 print(">-----------------END--------------->")
