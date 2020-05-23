@@ -1688,7 +1688,26 @@ print("<-----------------END---------------<")
 
 def findPythagoreanTriplets(nums):
     # Fill this in.
-    print()
+    status = False
+    my_dict = {}
+    a = 0
+    b = 0
+
+    for n in nums:
+        a = n
+        for i in range(1,len(nums)):
+            b = nums[i]
+            total = a**2 + b**2
+            my_dict[total] = 1
+
+    for n in nums:
+        if n**2 in my_dict:
+            status = True
+
+    return status
+
+
+
 
 print("Find Pythagorean Triplets  4-16")
 print("<-----------------START---------------<")
@@ -1830,7 +1849,7 @@ root.right.left = Node('f')
 
 
 print("Inverted Binary Tree 4-13")
-print("<-----------------START---------------<*********************************")
+print("<-----------------START---------------<")
 root.preorder()
 
 # a b d e c f
