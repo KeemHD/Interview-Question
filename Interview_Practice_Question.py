@@ -1801,13 +1801,24 @@ class Node:
     self.value = value
 
   def preorder(self):
-    #print(self.value)
+    print(self.value)
     if self.left: self.left.preorder()
     if self.right: self.right.preorder()
 
 def invert(node):
-    print("")
-  # Fill this in.
+    # Fill this in.
+    if node == None:
+        return None
+
+    else:
+        temp_node = None
+
+        invert(node.left)
+        invert(node.right)
+
+        temp_node = node.left
+        node.left = node.right
+        node.right = temp_node
 
 
 root = Node('a')
@@ -1819,7 +1830,7 @@ root.right.left = Node('f')
 
 
 print("Inverted Binary Tree 4-13")
-print("<-----------------START---------------<")
+print("<-----------------START---------------<*********************************")
 root.preorder()
 
 # a b d e c f
