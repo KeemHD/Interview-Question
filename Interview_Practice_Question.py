@@ -1,3 +1,41 @@
+#You are given the root of a binary tree. Find and return
+# the largest subtree of that tree, which is a valid binary search tree.
+#5/22/20
+class TreeNode:
+  def __init__(self, key):
+    self.left = None
+    self.right = None
+    self.key = key
+
+  def __str__(self):
+    # preorder traversal
+    answer = str(self.key)
+    if self.left:
+      answer += str(self.left)
+    if self.right:
+      answer += str(self.right)
+    return answer
+
+def largest_bst_subtree(root):
+    # Fill this in.
+    print()
+
+#     5
+#    / \
+#   6   7
+#  /   / \
+# 2   4   9
+node = TreeNode(5)
+node.left = TreeNode(6)
+node.right = TreeNode(7)
+node.left.left = TreeNode(2)
+node.right.left = TreeNode(4)
+node.right.right = TreeNode(9)
+print("Largest BST in a Binary Tree 5-22")
+print("<-----------------START---------------<")
+print(largest_bst_subtree(node))
+#749
+print("<-----------------END---------------<")
 #Given an array, nums, of n integers, find all unique triplets
 # (three numbers, a, b, & c) in nums such that a + b + c = 0.
 # Note that there may not be any triplets that sum to zero
@@ -5,12 +43,12 @@
 #Example:
 #Input: nums = [0, -1, 2, -3, 1]
 #Output: [0, -1, 1], [2, -3, 1]
-#4/21/20
+#5/21/20
 
 class Solution(object):
-  def threeSum(self, nums):
-    # Fill this in.
-    print()
+    def threeSum(self, nums):
+        # Fill this in.
+        print()
 
 # Test Program
 nums = [1, -2, 1, 0, 5]
