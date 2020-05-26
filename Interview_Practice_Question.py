@@ -1,3 +1,29 @@
+#ou are given a string of parenthesis.
+# Return the minimum number of parenthesis
+# that would need to be removed in order to
+# make the string valid. "Valid" means that
+# each open parenthesis has a matching closed parenthesis.
+
+#Example:
+
+#"()())()"
+
+#The following input should return 1.
+
+#")("
+#5/24/20
+
+def count_invalid_parenthesis(string):
+    # Fill this in.
+    print()
+
+print("Minimum Removals for Valid Parenthesis 5-24")
+print("<-----------------START---------------<")
+print(count_invalid_parenthesis("()())()"))
+# 1
+print("<-----------------END---------------<")
+
+
 #Given a 2-dimensional grid consisting of 1's (land blocks)
 # and 0's (water blocks), count the number of islands
 # present in the grid. The definition of an island is as follows:
@@ -15,15 +41,16 @@
 #5/23/20
 
 class Solution(object):
-  def inRange(self, grid, r, c):
-    numRow, numCol = len(grid), len(grid[0])
-    if r < 0 or c < 0 or r >= numRow or c >= numCol:
-      return False
-    return True
+    def inRange(self, grid, r, c):
+        numRow, numCol = len(grid), len(grid[0])
 
-  def numIslands(self, grid):
-    # Fill this in.
-    print()
+        if r < 0 or c < 0 or r >= numRow or c >= numCol:
+            return False
+        return True
+
+    def numIslands(self, grid):
+        # Fill this in.
+        print()
 
 grid = [[1, 1, 0, 0, 0],
         [0, 1, 0, 0, 1],
