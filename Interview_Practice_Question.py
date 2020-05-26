@@ -7,12 +7,24 @@
 
 def running_median(stream):
     # Fill this in.
-    print()
+    list = []
+    print(stream)
+    for i in range(len(stream)):
+        list.append(stream[i])
+        list.sort()
+        len_of_list = len(list)
+        pos = int(len_of_list/2)
 
+        if len(list) % 2 != 0:
+            med = list[pos]
+        else:
+            med = (list[pos-1] + list[pos])/2
+
+        print(med)
 print("Running Median 5-26")
 print("<-----------------START---------------<")
 running_median([2, 1, 4, 7, 2, 0, 5])
-# 2 1.5 2 3.0 2 2.0
+# 2 1.5 2 3.0 2 2.0 2
 print("<-----------------END---------------<")
 #Given a list of words, group the words that are
 # anagrams of each other. (An anagram are words
