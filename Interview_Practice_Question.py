@@ -1,3 +1,19 @@
+#You are given a stream of numbers.
+# Compute the median for each new element .
+
+#Eg. Given [2, 1, 4, 7, 2, 0, 5], the
+# algorithm should output [2, 1.5, 2, 3.0, 2, 2, 2]
+#5/26/20
+
+def running_median(stream):
+    # Fill this in.
+    print()
+
+print("Running Median 5-26")
+print("<-----------------START---------------<")
+running_median([2, 1, 4, 7, 2, 0, 5])
+# 2 1.5 2 3.0 2 2.0
+print("<-----------------END---------------<")
 #Given a list of words, group the words that are
 # anagrams of each other. (An anagram are words
 # made up of the same letters).
@@ -72,8 +88,9 @@ class Solution(object):
 
     def numIslands(self, grid):
         # Fill this in.
-        print()
+        island_count = 0
 
+        return island_count
 grid = [[1, 1, 0, 0, 0],
         [0, 1, 0, 0, 1],
         [1, 0, 0, 1, 1],
