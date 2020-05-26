@@ -1,4 +1,26 @@
-#ou are given a string of parenthesis.
+#Given a list of words, group the words that are
+# anagrams of each other. (An anagram are words
+# made up of the same letters).
+
+#Example:
+
+#Input: ['abc', 'bcd', 'cba', 'cbd', 'efg']
+#Output: [['abc', 'cba'], ['bcd', 'cbd'], ['efg']]
+#5/25/20
+
+import collections
+
+def groupAnagramWords(strs):
+    # Fill this in.
+    print()
+
+print("Group Words that are Anagrams 5-25")
+print("<-----------------START---------------<")
+print(groupAnagramWords(['abc', 'bcd', 'cba', 'cbd', 'efg']))
+# [['efg'], ['bcd', 'cbd'], ['abc', 'cba']]
+print("<-----------------END---------------<")
+
+#You are given a string of parenthesis.
 # Return the minimum number of parenthesis
 # that would need to be removed in order to
 # make the string valid. "Valid" means that
