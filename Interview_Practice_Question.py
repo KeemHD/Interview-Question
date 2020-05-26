@@ -1,3 +1,41 @@
+#Given a 2-dimensional grid consisting of 1's (land blocks)
+# and 0's (water blocks), count the number of islands
+# present in the grid. The definition of an island is as follows:
+#1.) Must be surrounded by water blocks.
+#2.) Consists of land blocks (1's) connected to adjacent land blocks (either vertically or horizontally).
+#Assume all edges outside of the grid are water.
+#Example:
+#Input:
+#10001
+#11000
+#10110
+#00000
+
+#Output: 3
+#5/23/20
+
+class Solution(object):
+  def inRange(self, grid, r, c):
+    numRow, numCol = len(grid), len(grid[0])
+    if r < 0 or c < 0 or r >= numRow or c >= numCol:
+      return False
+    return True
+
+  def numIslands(self, grid):
+    # Fill this in.
+    print()
+
+grid = [[1, 1, 0, 0, 0],
+        [0, 1, 0, 0, 1],
+        [1, 0, 0, 1, 1],
+        [0, 0, 0, 0, 0]]
+
+print("Find the Number of Islands 5-23")
+print("<-----------------START---------------<")
+print(Solution().numIslands(grid))
+# 3
+print("<-----------------END---------------<")
+
 #You are given the root of a binary tree. Find and return
 # the largest subtree of that tree, which is a valid binary search tree.
 #5/22/20
@@ -1669,11 +1707,12 @@ print("<-----------------END---------------<")
 def distance(s1, s2):
     # Fill this in.
     count = 0
-    
+    index = 0
+
     return count
 
 print("Edit distance 4-17")
-print("<-----------------START---------------<")
+print("<-----------------START---------------<*****************************")
 print(distance('biting', 'sitting'))
 # 2
 print("<-----------------END---------------<")
