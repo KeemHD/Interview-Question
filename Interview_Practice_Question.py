@@ -85,7 +85,18 @@ print("<-----------------END---------------<")
 
 def count_invalid_parenthesis(string):
     # Fill this in.
-    print()
+    list = []
+
+    for c in string:
+        if c == '(':
+            list.append(c)
+        elif c == ')' and len(list) >0:
+            if list[-1] == '(':
+                list.pop()
+        else:
+            list.append(c)
+
+    return len(list)
 
 print("Minimum Removals for Valid Parenthesis 5-24")
 print("<-----------------START---------------<")
