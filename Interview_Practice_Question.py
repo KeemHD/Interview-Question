@@ -1,3 +1,19 @@
+#You are given an array of tuples (start, end)
+# representing time intervals for lectures.
+# The intervals may be overlapping. Return
+# the number of rooms that are required.
+
+#For example. [(30, 75), (0, 50), (60, 150)] should return 2.
+#5/27/20
+def room_scheduling(arr):
+    room_count = 0
+    return room_count
+
+print("Room Scheduling 5-27")
+print("<-----------------START---------------<")
+print(room_scheduling([(30, 75), (0, 50), (60, 150)]))
+print("<-----------------END---------------<")
+
 #You are given a stream of numbers.
 # Compute the median for each new element .
 
@@ -44,6 +60,7 @@ def groupAnagramWords(strs):
     temp = []
     status = True
 
+    print(strs)
     for w in strs:
         temp.append(w)
         for s in strs: # if anagram appen to temp then remove anagram from strs
