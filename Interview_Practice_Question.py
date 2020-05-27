@@ -6,8 +6,27 @@
 #For example. [(30, 75), (0, 50), (60, 150)] should return 2.
 #5/27/20
 def room_scheduling(arr):
-    room_count = 0
-    return room_count
+    rooms = []
+    inserted = False
+
+
+    for i in range(len(arr)): #sorting list of tuples on start times
+        if i ==0:
+            rooms.append(arr[i])
+        else:
+            for x in range(len(rooms)):
+                if rooms[x][0]>= arr[i][0]:
+                    rooms.insert(x,arr[i])
+                    inserted = True
+                    break
+            if not inserted:
+                rooms.append(arr[i])
+            inserted = False
+    #rooms is sorted by start times
+    print(rooms)
+
+
+    return len(rooms)
 
 print("Room Scheduling 5-27")
 print("<-----------------START---------------<")
