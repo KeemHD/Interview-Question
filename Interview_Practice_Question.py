@@ -40,7 +40,27 @@ import collections
 
 def groupAnagramWords(strs):
     # Fill this in.
-    print()
+    output = []
+    temp = []
+    status = True
+
+    for w in strs:
+        temp.append(w)
+        for s in strs: # if anagram appen to temp then remove anagram from strs
+            if len(temp[0]) == len(s):
+                for i in range(len(s)):
+                    if temp[0][i] not in s:
+                        status = False
+                if status and temp[0] != s:
+                    temp.append(s)
+                    strs.remove(s)
+                status = True
+
+        output.insert(0,temp.copy())
+        temp.clear()
+
+    return output
+
 
 print("Group Words that are Anagrams 5-25")
 print("<-----------------START---------------<")
