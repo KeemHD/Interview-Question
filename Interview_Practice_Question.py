@@ -1,3 +1,25 @@
+#Given a string, you need to reverse the
+# order of characters in each word within
+# a sentence while still preserving whitespace
+# and initial word order.
+
+#Example 1:
+#Input: "The cat in the hat"
+#Output: "ehT tac ni eht tah"
+#Note: In the string, each word is separated by single
+# space and there will not be any extra space in the string.
+#5/28/20
+
+class Solution:
+    def reverseWords(self, str):
+        # Fill this in.
+        print()
+
+print("Reverse Words in a String 5-28")
+print("<-----------------START---------------<")
+print(Solution().reverseWords("The cat in the hat"))
+# ehT tac ni eht tah
+print("<-----------------END---------------<")
 #You are given an array of tuples (start, end)
 # representing time intervals for lectures.
 # The intervals may be overlapping. Return
