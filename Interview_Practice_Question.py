@@ -13,8 +13,27 @@
 class Solution:
     def reverseWords(self, str):
         # Fill this in.
-        print()
+        rw = ""
+        r_str = ""
 
+        for s in str:
+            if s == " ":
+                rw = Solution().rev(rw)
+                r_str += rw
+                r_str += s
+                rw = ""
+            else:
+                rw += s
+
+        rw = Solution().rev(rw)
+        r_str += rw
+        return r_str
+
+    def rev(self,str):
+        r = ""
+        for i in range(len(str)):
+            r += str[len(str)-1-i]
+        return r
 print("Reverse Words in a String 5-28")
 print("<-----------------START---------------<")
 print(Solution().reverseWords("The cat in the hat"))
