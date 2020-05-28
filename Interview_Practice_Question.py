@@ -7,6 +7,7 @@
 #5/27/20
 def room_scheduling(arr):
     rooms = []
+    temp = []
     inserted = False
 
 
@@ -15,7 +16,7 @@ def room_scheduling(arr):
             rooms.append(arr[i])
         else:
             for x in range(len(rooms)):
-                if rooms[x][0]>= arr[i][0]:
+                if rooms[x][0] >= arr[i][0]:
                     rooms.insert(x,arr[i])
                     inserted = True
                     break
@@ -23,10 +24,24 @@ def room_scheduling(arr):
                 rooms.append(arr[i])
             inserted = False
     #rooms is sorted by start times
+
+    i = 0
+    while i in range(len(rooms)):
+        start = rooms[i][0]
+        end = rooms[i][1]
+        for t in rooms:
+            if end < t[0]:
+                end = t[1]
+                rooms.remove((t))
+
+
+        temp.append((start,end))
+        i+=1
+
+    rooms = temp
     print(rooms)
 
-
-    return len(rooms)
+    return len(temp)
 
 print("Room Scheduling 5-27")
 print("<-----------------START---------------<")
