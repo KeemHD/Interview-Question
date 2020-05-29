@@ -16,6 +16,33 @@
 def findRanges(nums):
     #Fill this in.
     print(nums)
+    output = []
+    prev = str(nums[0])
+    range = ""
+
+    for n in nums:
+        n = str(n)
+
+        if len(range) == 0:
+            range += prev
+            range += "->"
+
+        if (int(prev) + 1) == int(n) or prev == n:
+            prev = n
+
+        else:
+            range += prev
+            prev = n
+            output.append(range)
+            range = ""
+
+    if len(range) == 0:
+        range += n
+        range += "->"
+    range += n
+
+    output.append(range)
+    return output
 
 
 print("Merge List of Number Into Ranges 5-29")
