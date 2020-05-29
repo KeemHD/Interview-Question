@@ -1,3 +1,30 @@
+#Daily Interview Pro
+#Hi, here's your problem today. This problem
+# was recently asked by Facebook:
+
+#Given a sorted list of numbers,
+# return a list of strings that represent
+# all of the consecutive numbers.
+
+#Example:
+#Input: [0, 1, 2, 5, 7, 8, 9, 9, 10, 11, 15]
+#Output: ['0->2', '5->5', '7->11', '15->15']
+#Assume that all numbers will be greater
+# than or equal to 0, and each element can repeat.
+#5/29/20
+
+def findRanges(nums):
+    #Fill this in.
+    print(nums)
+
+
+print("Merge List of Number Into Ranges 5-29")
+print("<-----------------START---------------<")
+print(findRanges([0, 1, 2, 5, 7, 8, 9, 9, 10, 11, 15]))
+# ['0->2', '5->5', '7->11', '15->15']
+print("<-----------------END---------------<")
+
+
 #Given a string, you need to reverse the
 # order of characters in each word within
 # a sentence while still preserving whitespace
@@ -15,6 +42,7 @@ class Solution:
         # Fill this in.
         rw = ""
         r_str = ""
+        print(str)
 
         for s in str:
             if s == " ":
@@ -34,6 +62,7 @@ class Solution:
         for i in range(len(str)):
             r += str[len(str)-1-i]
         return r
+
 print("Reverse Words in a String 5-28")
 print("<-----------------START---------------<")
 print(Solution().reverseWords("The cat in the hat"))
