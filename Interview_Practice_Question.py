@@ -1,3 +1,27 @@
+#Hi, here's your problem today.
+# This problem was recently asked by Amazon:
+
+#You are given an array of integers.
+# Return an array of the same size where
+# the element at each index is the product
+# of all the elements in the original array
+# except for the element at that index.
+
+#For example, an input of [1, 2, 3, 4, 5]
+# should return [120, 60, 40, 30, 24].
+
+#You cannot use division in this problem.
+#5/30/20
+
+def products(nums):
+    # Fill this in.
+    print(nums)
+
+print("Product of Array Except Self 5-30")
+print("<-----------------START---------------<")
+print(products([1, 2, 3, 4, 5]))
+# [120, 60, 40, 30, 24]
+print("<-----------------END---------------<")
 #Daily Interview Pro
 #Hi, here's your problem today. This problem
 # was recently asked by Facebook:
