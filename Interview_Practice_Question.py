@@ -16,6 +16,17 @@
 def products(nums):
     # Fill this in.
     print(nums)
+    product = 1
+    product_array = []
+
+    for i in range(len(nums)):
+        for n in range(len(nums)):
+            if i != n:
+                product *= nums[n]
+
+        product_array.append(product)
+        product = 1
+    return product_array
 
 print("Product of Array Except Self 5-30")
 print("<-----------------START---------------<")
