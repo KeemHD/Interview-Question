@@ -20,6 +20,18 @@ class Solution:
     def intersection(self, nums1, nums2):
         # Fill this in.
         print(nums1,nums2)
+        my_dict = {}
+        output = []
+
+        for n in nums1:
+            my_dict[n] = 1
+
+        for n in nums2:
+            if n in my_dict:
+                output.append(n)
+                my_dict.pop(n)
+
+        return output
 
 print("Array Intersection 5-31")
 print("<-----------------START---------------<")
