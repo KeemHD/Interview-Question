@@ -1,6 +1,36 @@
 #Hi, here's your problem today.
 # This problem was recently asked by Amazon:
 
+#Given two arrays, write a function to compute
+# their intersection - the intersection means
+# the numbers that are in both arrays.
+
+#Example 1:
+#Input: nums1 = [1,2,2,1], nums2 = [2,2]
+#Output: [2]
+#Example 2:
+#Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+#Output: [9,4]
+#Note:
+#Each element in the result must be unique.
+#The result can be in any order.
+#5/31/20
+
+class Solution:
+    def intersection(self, nums1, nums2):
+        # Fill this in.
+        print(nums1,nums2)
+
+print("Array Intersection 5-31")
+print("<-----------------START---------------<")
+print(Solution().intersection([4, 9, 5], [9, 4, 9, 8, 4]))
+# [9, 4]
+print("<-----------------END---------------<")
+
+
+#Hi, here's your problem today.
+# This problem was recently asked by Amazon:
+
 #You are given an array of integers.
 # Return an array of the same size where
 # the element at each index is the product
