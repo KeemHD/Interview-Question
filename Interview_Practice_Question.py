@@ -1,4 +1,27 @@
 #Hi, here's your problem today.
+# This problem was recently asked by Microsoft:
+
+#You are given an array of integers.
+# Return the length of the longest increasing
+# subsequence (not necessarily contiguous) in the array.
+
+#Example:
+#[0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15]
+
+#The following input should return 6 since the longest
+# increasing subsequence is 0, 2, 6, 9 , 11, 15.
+#6/01/20
+
+def longest_increasing_subsequence(nums):
+    print(nums)
+
+print("Longest Increasing Subsequence 6-01")
+print("<-----------------START---------------<")
+print(longest_increasing_subsequence([0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15]))
+print("<-----------------END---------------<")
+
+
+#Hi, here's your problem today.
 # This problem was recently asked by Amazon:
 
 #Given two arrays, write a function to compute
@@ -801,7 +824,7 @@ def first_missing_positive(nums):
     print()
 
 print("First Missing Positive Integer 5-13")
-print("<-----------------START---------------<")
+print("<-----------------START---------------<@@@@@@@@@@@@@@@@@@@@@@@@@@")
 print(first_missing_positive([3, 4, -1, 1]))
 print(first_missing_positive([1,2,4]))
 # 2
