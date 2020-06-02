@@ -1,3 +1,19 @@
+#Given a time in the format of hour and minute,
+# calculate the angle of the hour and minute hand on a clock.
+#6/02/20
+
+def calcAngle(h, m):
+    # Fill this in.
+    print()
+
+print("Angles of a Clock 6-02")
+print("<-----------------START---------------<")
+print(calcAngle(3, 30))
+# 75
+print(calcAngle(12, 30))
+# 165
+print("<-----------------END---------------<")
+
 #Hi, here's your problem today.
 # This problem was recently asked by Microsoft:
 
