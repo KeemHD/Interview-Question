@@ -4,7 +4,13 @@
 
 def calcAngle(h, m):
     # Fill this in.
-    print()
+
+    h_angle = .5 * (60 * h + m)
+    m_angle = 6 * m
+    total_angle = abs(h_angle-m_angle)
+    total_angle = min(360 - total_angle, total_angle)
+
+    return(int(total_angle))
 
 print("Angles of a Clock 6-02")
 print("<-----------------START---------------<")
