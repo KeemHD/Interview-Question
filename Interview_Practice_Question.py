@@ -17,7 +17,8 @@
 # / \  / \
 #3  2  4  5
 
-#This is a representation of the expression (3 + 2) * (4 + 5), and should return 45.
+#This is a representation of the expression (3 + 2) * (4 + 5),
+# and should return 45.
 #6/03/20
 
 
@@ -34,7 +35,19 @@ DIVIDE = "/"
 
 def evaluate(root):
     # Fill this in.
-    print(root)
+    if root.val == None:
+        return 0
+
+    if root.val == DIVIDE:
+        return evaluate(root.left) / evaluate(root.right)
+    if root.val == TIMES:
+        return evaluate(root.left) * evaluate(root.right)
+    if root.val == PLUS:
+        return evaluate(root.left) + evaluate(root.right)
+    if root.val == MINUS:
+        return evaluate(root.left) - evaluate(root.right)
+    else:
+        return root.val
 
 tree = Node(TIMES)
 tree.left = Node(PLUS)
