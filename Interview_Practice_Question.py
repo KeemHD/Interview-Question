@@ -2105,34 +2105,65 @@ print("<-----------------END---------------<")
 #Input: - ( 3 + ( 2 - 1 ) )
 #Output: -4
 # 4/18/20
+def reverse(str):
+    r = ""
+    for i in range(len(str)):
+        if str[len(str) - 1 - i] != " ":
+            r += str[len(str) - 1 - i]
+    return r
 
 def eval(expression):
     # Fill this in.
-    op_stack = []
-    post_stack = []
-    '''
+    stack = []
+    total = 0
+    exp = ""
+    add = False
+    subtract = False
+
+
     for op in expression:
-        if op == '0' or op == '0':
-            post_stack.append(op)
-        if op == '(':
-            op_stack.append(op)
         if op == ')':
-            while op_stack and op_stack.top() != '(':
-                post_stack.append(op_stack.pop())
-            op_stack.pop()
-        if op == '+' or op == '-':
-            if op_stack.empty() or op_stack.top() == '(':
-                post_stack.push(op)
-            else:
-                while not op_stack.empty() and op_stack.top() != '(':
-                    op_stack.pop()
-                    post_stack.append(op_stack.top())
-    '''
-    return 2222
+            i=0
+            while stack[len(stack)-1-i] != '(':
+                exp += stack[len(stack)-1-i]
+                stack.pop()
+
+            exp = reverse(exp)
+            for i in range(len(exp)):
+                if exp[i] == "+":
+                    add = True
+
+                elif exp[i] == "-":
+                    subtract = True
+
+                elif total == 0:
+                    total = int(exp[i])
+
+                elif add:
+                    total += int(exp[i])
+                    add = False
+                elif subtract:
+                    total -= int(exp[i])
+                    subtract = False
+
+                else:
+                    total += int(exp[i])
+
+            exp =""
+            stack.pop()
+
+
+        else:
+            stack.append(op)
+
+    if stack[0] == "-":
+        total *= -1
+
+    return total
 
 
 print("Simple Calculator 4-18")
-print("<-----------------START---------------<")
+print("<-----------------START---------------<@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
 print(eval('- (3 + ( 2 - 1 ) )'))
 # -4
 print("<-----------------END---------------<")
