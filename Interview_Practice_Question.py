@@ -25,8 +25,28 @@
 
 def getBonuses(performance):
     # Fill this in.
-    print(performance)
+    bonus_total = 1
+    bonus = []
+    prev = performance[0]
 
+    for i in range(len(performance)-1):
+        next = performance[i+1]
+
+        if performance[i] > prev:
+            bonus_total+=1
+        if performance[i] > next:
+            bonus_total+=1
+
+        bonus.append(bonus_total)
+        prev = performance[i]
+        bonus_total = 1
+
+    if performance[-1] > prev:
+        bonus_total+=1
+
+    bonus.append(bonus_total)
+
+    return bonus
 print("Distribute Bonuses 6-05")
 print("<-----------------START---------------<")
 print(getBonuses([1, 2, 3, 2, 3, 5, 1]))
