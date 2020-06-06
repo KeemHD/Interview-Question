@@ -1,6 +1,30 @@
 #Hi, here's your problem today.
 # This problem was recently asked by Twitter:
 
+#Given a list of integers, return the bounds of the
+# minimum range that must be sorted so that the whole list would be sorted.
+
+#Example:
+#Input: [1, 7, 9, 5, 7, 8, 10]
+#Output: (1, 5)
+#Explanation:
+#The numbers between index 1 and 5 are out of order and need to be sorted.
+#6/6/20
+
+def findRange(nums):
+    # Fill this in.
+    print(nums)
+
+print("Min Range Needed to Sort 6-06")
+print("<-----------------START---------------<")
+print(findRange([1, 7, 9, 5, 7, 8, 10]))
+# (1, 5)
+print("<-----------------END---------------<")
+
+
+#Hi, here's your problem today.
+# This problem was recently asked by Twitter:
+
 #You are the manager of a number of employees
 # who all sit in a row. The CEO would like to
 # give bonuses to all of your employees, but
@@ -25,8 +49,8 @@
 
 def getBonuses(performance):
     # Fill this in.
-    bonus_total = 1
     bonus = []
+    bonus_total = 1
     prev = performance[0]
 
     for i in range(len(performance)-1):
