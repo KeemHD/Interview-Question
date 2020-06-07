@@ -1,6 +1,11 @@
-#Hi, here's your problem today. This problem was recently asked by LinkedIn:
+#Hi, here's your problem today.
+# This problem was recently asked by LinkedIn:
 
-#Write a function that reverses the digits a 32-bit signed integer, x. Assume that the environment can only store integers within the 32-bit signed integer range, [-2^31, 2^31 - 1]. The function returns 0 when the reversed integer overflows.
+#Write a function that reverses the digits a
+# 32-bit signed integer, x. Assume that the environment
+# can only store integers within the 32-bit signed
+# integer range, [-2^31, 2^31 - 1].
+# The function returns 0 when the reversed integer overflows.
 
 #Example:
 #Input: 123
@@ -10,7 +15,24 @@
 class Solution:
     def reverse(self, x):
         # Fill this in.
-        print(x)
+        #rev_num = str(x)[::-1] # can be used to reverse an int into a string
+
+        rev_temp = ""
+
+        while x > 10:
+            rev_temp += str(x % 10)
+            x /= 10
+            x = int(x)
+
+        rev_temp += str(x)
+        rev_num = int(rev_temp)
+
+        bit = bin(rev_num)[2:]
+        #bit = bin(int(rev_num))[2:]
+        if len(bit) > 32:
+            rev_num = 0
+
+        return rev_num
 
 print("Reverse Integer 6-07")
 print("<-----------------START---------------<")
