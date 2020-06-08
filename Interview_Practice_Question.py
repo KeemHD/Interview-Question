@@ -14,24 +14,32 @@
 class minStack(object):
     def __init__(self):
         # Fill this in.
-        print()
+        self.stack = []
+        self.min = []
 
     def push(self, x):
         # Fill this in.
-        print()
-
+        self.stack.append(x)
+        if len(self.min) == 0:
+            self.min.append(x)
+        elif x < self.min[-1]:
+            self.min.append(x)
 
     def pop(self):
         # Fill this in.
-        print()
+        temp = self.stack[-1]
+        self.stack.pop()
+
+        if temp == self.min[-1]:
+            self.min.pop()
 
     def top(self):
         # Fill this in.
-        print()
+        return self.stack[-1]
 
     def getMin(self):
         # Fill this in.
-        print()
+        return self.min[-1]
 
 print("Min Stack 6-08")
 print("<-----------------START---------------<")
