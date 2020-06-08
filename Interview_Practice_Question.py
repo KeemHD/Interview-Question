@@ -1,3 +1,56 @@
+#Hi, here's your problem today. This problem was recently asked by Uber:
+
+#Design a simple stack that supports push, pop, top,
+# and retrieving the minimum element in constant time.
+
+#push(x) -- Push element x onto stack.
+#pop() -- Removes the element on top of the stack.
+#top() -- Get the top element.
+#getMin() -- Retrieve the minimum element in the stack.
+
+#Note: be sure that pop() and top() handle being called on an empty stack.
+#6/8/20
+
+class minStack(object):
+    def __init__(self):
+        # Fill this in.
+        print()
+
+    def push(self, x):
+        # Fill this in.
+        print()
+
+
+    def pop(self):
+        # Fill this in.
+        print()
+
+    def top(self):
+        # Fill this in.
+        print()
+
+    def getMin(self):
+        # Fill this in.
+        print()
+
+print("Min Stack 6-08")
+print("<-----------------START---------------<")
+x = minStack()
+x.push(-2)
+x.push(0)
+x.push(-3)
+print(x.getMin())
+# -3
+x.pop()
+print(x.top())
+# 0
+print(x.getMin())
+# -2
+print("<-----------------END---------------<")
+
+
+
+
 #Hi, here's your problem today.
 # This problem was recently asked by LinkedIn:
 
@@ -19,12 +72,12 @@ class Solution:
 
         rev_temp = ""
 
-        while x > 10:
+        while x > 0:
             rev_temp += str(x % 10)
             x /= 10
             x = int(x)
 
-        rev_temp += str(x)
+        #rev_temp += str(x)
         rev_num = int(rev_temp)
 
         bit = bin(rev_num)[2:]
