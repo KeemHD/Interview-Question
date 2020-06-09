@@ -38,8 +38,30 @@ class Node(object):
 
 def fullBinaryTree(node):
     # Fill this in.
-    print()
+    root = node
+    left = None
+    right = None
 
+    if node == None:
+        return None
+
+    elif node.left and node.right:  # node is valid if this is true
+        left = fullBinaryTree(node.left)
+        right = fullBinaryTree(node.right)
+
+    elif node.left == None and node.right == None:# node is valid if this is true
+        return node
+
+
+    else:
+        if node.left:
+            return node.left
+        else:
+            return node.right
+
+    root.left = left
+    root.right = right
+    return root
 # Given this tree:
 #     1
 #    / \
