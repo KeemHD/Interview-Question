@@ -1,6 +1,27 @@
 #Hi, here's your problem today.
 # This problem was recently asked by Google:
 
+#Given a string with a certain rule:
+# k[string] should be expanded to string k times.
+# So for example, 3[abc] should be expanded to
+# abcabcabc. Nested expansions can happen,
+# so 2[a2[b]c] should be expanded to abbcabbc.
+
+def decodeString(s):
+    # Fill this in.
+    print(s)
+
+print("Decode String 6-10")
+print("<-----------------START---------------<")
+print(decodeString('2[a2[b]c]'))
+# abbcabbc
+print("<-----------------END---------------<")
+
+
+#6/10/20
+#Hi, here's your problem today.
+# This problem was recently asked by Google:
+
 #Given a binary tree, remove the nodes in which
 # there is only 1 child, so that the binary
 # tree is a full binary tree.
@@ -85,6 +106,8 @@ tree.left.left = Node(0)
 
 print("Full Binary Tree 6-09")
 print("<-----------------START---------------<")
+print(tree)
+print("-")
 print(fullBinaryTree(tree))
 # 1
 # 03
@@ -212,6 +235,9 @@ print("<-----------------END---------------<")
 
 def findRange(nums):
     # Fill this in.
+    start = 0
+    end = len(nums) -1
+
     print(nums)
 
 print("Min Range Needed to Sort 6-06")
