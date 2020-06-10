@@ -10,6 +10,42 @@
 def decodeString(s):
     # Fill this in.
     print(s)
+    solution = ""
+    temp = ""
+    k = []
+    inner_str = ""
+
+    for c in s:
+        if c.isdigit():
+            k.append(c)
+        else:
+            if c != "]":
+                temp += c
+            else:
+                while temp[-1] != "[":
+                    inner_str += temp[-1]
+                    temp = temp[:-1]
+
+                inner_str = reverse_string(inner_str)
+                if len(k) > 0:
+                    inner_str *= int(k[-1])
+                    k.pop()
+
+                solution = inner_str
+                temp = temp[:-1]
+                temp += inner_str
+                inner_str = ""
+
+    return solution
+
+def reverse_string(s):
+    solution = ""
+
+    for i in range(len(s)):
+        solution += s[len(s)-1-i]
+
+    return solution
+
 
 print("Decode String 6-10")
 print("<-----------------START---------------<")
