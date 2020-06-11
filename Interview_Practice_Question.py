@@ -22,13 +22,48 @@ from collections import defaultdict
 def chainedWords(words):
     # Fill this in.
     print(words)
+    appended = False
+    status = False
+    list = []
 
-    
+    for w in words:
+        if len((list)) == 0:
+            list.append(w)
+            appended =True
+        else:
+            for i in range(len(list)):
+                if list[-1][-1] == w[0]:
+                    list.append(w)
+                    appended = True
+                    break
+                else:
+                    if list[i][-1] == w[0]:
+                        list.insert(i+1,w)
+                        appended = True
+                        break
+                    elif list[i][0] == w[-1]:
+                        list.insert(i,w)
+                        appended = True
+                        break
+
+        if not appended:
+            list.append(w)
+        else:
+            appended = False
+
+    print(list)
+
+
+    if list[0][0] == list[-1][-1]:
+        status = True
+    return status
+
 
 print("Circle of Chained Words 6-11")
 print("<-----------------START---------------<")
 print(chainedWords(['apple', 'eggs', 'snack', 'karat', 'tuna']))
 # True
+print(chainedWords(['eggs', 'karat', 'apple', 'snack', 'tuna']))
 print("<-----------------END---------------<")
 
 
