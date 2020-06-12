@@ -18,6 +18,34 @@
 def jumpToEnd(nums):
     # Fill this in.
     print(nums)
+    max = 0
+    jump = 0
+    i = 0
+
+    while i in range(len(nums)):
+        allowed_jumps = nums[i]
+
+        if (allowed_jumps+i) < len(nums)-1:
+            x = i+1
+            allowed_jumps += x
+
+            while x < allowed_jumps:
+                if max < nums[x]:
+                    max = nums[x]
+                    i = x
+
+                x+=1
+            max = 0
+
+        else:
+            i = len(nums)
+
+        jump += 1
+
+
+    print("Jumps required:")
+    return jump
+
 
 print("Jump to the End 6-12")
 print("<-----------------START---------------<")
