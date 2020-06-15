@@ -22,8 +22,28 @@ class Node():
 
 def is_symmetric(root):
     # Fill this in.
-    print()
+    status = True
 
+    if len(root.children) == 0:
+        return root.value
+
+    else:
+        left = root.children[0]
+        right = root.children[1]
+
+        if left.value == right.value and len(left.children) == len(right.children):
+            length = len(left.children)
+
+            for i in range(length):
+                l = is_symmetric(left.children[i])
+                r = is_symmetric(right.children[length-1-i])
+
+                if l != r:
+                    status = False
+        else:
+            status = False
+
+    return status
 
 
 tree = Node(4)
