@@ -8,8 +8,17 @@
 
 def find_min_max(nums):
     # Fill this in.
-    print()
+    print(nums)
+    max = nums[0]
+    min = nums[0]
 
+    for i in range(1,len(nums)):
+        if nums[i] > max:
+            max = nums[i]
+        elif nums[i] < min:
+            min = nums[i]
+
+    return min,max
 
 print("Max and Min with Limited Comparisons 6-14")
 print("<-----------------START---------------<")
