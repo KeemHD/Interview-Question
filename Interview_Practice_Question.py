@@ -1,6 +1,25 @@
 #Hi, here's your problem today.
 # This problem was recently asked by Microsoft:
 
+#Given a list of numbers of size n, where
+# n is greater than 3, find the maximum and
+# minimum of the list using less than 2 * (n - 1) comparisons.
+#6/15/20
+
+def find_min_max(nums):
+    # Fill this in.
+    print()
+
+
+print("Max and Min with Limited Comparisons 6-14")
+print("<-----------------START---------------<")
+print(find_min_max([3, 5, 1, 2, 4, 8]))
+# (1, 8)
+print("<-----------------END---------------<")
+
+#Hi, here's your problem today.
+# This problem was recently asked by Microsoft:
+
 #A k-ary tree is a tree with k-children,
 # and a tree is symmetrical if the data of the
 # left side of the tree is the same as the right
