@@ -23,7 +23,7 @@
 class Solution():
     def fibonacci(self, n):
         # fill this in.
-        print("")
+        print(" ")
 
 n = 9
 print("Nth Fibonacci Number 6-16")
