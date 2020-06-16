@@ -23,9 +23,21 @@
 class Solution():
     def fibonacci(self, n):
         # fill this in.
-        print("")
 
-n = 9
+        for i in range(n):
+            fib.append(fib[-2] + fib[-1])
+
+        return fib[n-1]
+        #recursive solution
+        """
+        if n == 1 or n == 2:
+            return 1
+        else:
+            return Solution().fibonacci(n-2) + Solution().fibonacci(n-1)
+        """
+
+
+n =9
 print("Nth Fibonacci Number 6-16")
 print("<-----------------START---------------<")
 print(Solution().fibonacci(n))
