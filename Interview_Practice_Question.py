@@ -15,7 +15,12 @@
 class Solution(object):
     def findSingle(self, nums):
         # Fill this in.
-        print()
+        output = nums[0]
+
+        for i in range(1,len(nums)):
+            output = output^nums[i]
+
+        return output
 
 nums = [1, 1, 3, 4, 4, 5, 6, 5, 6]
 print(" Find the Single Element in an Array of Duplicates 6-17")
