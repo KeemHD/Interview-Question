@@ -1,6 +1,32 @@
 #Hi, here's your problem today.
 # This problem was recently asked by Apple:
 
+#Given an array of integers, arr, where
+# all numbers occur twice except one number
+# which occurs once, find the number. Your
+# solution should ideally be O(n) time and use
+# constant extra space.
+
+#Example:
+#Input: arr = [7, 3, 5, 5, 4, 3, 4, 8, 8]
+#Output: 7
+#6/17/20
+
+class Solution(object):
+    def findSingle(self, nums):
+        # Fill this in.
+        print()
+
+nums = [1, 1, 3, 4, 4, 5, 6, 5, 6]
+print(" Find the Single Element in an Array of Duplicates 6-17")
+print("<-----------------START---------------<")
+print(Solution().findSingle(nums))
+# 3
+print("<-----------------END---------------<")
+
+#Hi, here's your problem today.
+# This problem was recently asked by Apple:
+
 #The Fibonacci sequence is the integer
 # sequence defined by the recurrence relation:
 # F(n) = F(n-1) + F(n-2), where F(0) = 0 and F(1) = 1.
@@ -24,10 +50,11 @@ class Solution():
     def fibonacci(self, n):
         # fill this in.
 
+        fib = [0,1,1]
         for i in range(n):
             fib.append(fib[-2] + fib[-1])
 
-        return fib[n-1]
+        return fib[n]
         #recursive solution
         """
         if n == 1 or n == 2:
