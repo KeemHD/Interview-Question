@@ -41,7 +41,45 @@
 class Solution():
     def romanToInt(self, s):
         #Fill this in.
-        print()
+        print(s)
+
+        total = 0
+
+        for c in s:
+            current_Num = Solution().getNum(c)
+            if total == 0:
+                total += current_Num
+            else:
+                if prev < current_Num:
+                    total -= prev
+                    total += (current_Num-prev)
+                else:
+                    total += current_Num
+            prev = current_Num
+
+        return total
+
+
+
+    def getNum(self,s):
+        num = 0
+        if s == 'I':
+            num = 1
+        elif s == 'V':
+            num = 5
+        elif s == 'X':
+            num = 10
+        elif s == 'L':
+            num = 50
+        elif s == 'C':
+            num = 100
+        elif s == 'D':
+            num = 500
+        elif s == 'M':
+            num = 1000
+
+        return num
+
 
 n = 'MCMX'
 print("Convert Roman Numerals to Decimal 6-18")
