@@ -14,11 +14,62 @@
 class Solution(object):
     def compress(self, chars):
         # Fill this in.
-        print(chars)
+        print("Original:     "+str(chars))
+        count = 1
+        compressed = []
+        temp = ""
+
+        for c in chars:
+            if temp == "":
+                temp = c
+                compressed.append(temp)
+
+            elif temp == c:
+                count+=1
+
+            else:
+                if count !=1:
+                    compressed.append(str(count))
+                temp = c
+                compressed.append(temp)
+                count = 1
+
+        if count != 1:
+            compressed.append(str(count))
+
+
+        Solution().deCompress(compressed)
+        return compressed
+
+
+    def deCompress(self, chars):
+        de_comp = []
+        count  = 1
+
+        for c in chars:
+            if c.isdigit():
+                count = int(c)-1
+            else:
+                temp = c
+
+
+            i = 0
+            while i < count:
+                de_comp.append(temp)
+                i+=1
+
+            count = 1
+
+        return de_comp
+
 
 print("String Compression 6-19")
 print("<-----------------START---------------<")
-print(Solution().compress(['a', 'a', 'b', 'c', 'c', 'c']))
+comp = Solution().compress(['a', 'a', 'b', 'c', 'c', 'c'])
+print("Compressed:   "+str(comp))
+deComp = Solution().deCompress(comp)
+print("DeCompressed: "+ str(deComp))
+
 # ['a', '2', 'b', 'c', '3']
 print("<-----------------END---------------<")
 
