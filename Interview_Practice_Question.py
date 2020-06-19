@@ -1,6 +1,33 @@
 #Hi, here's your problem today.
 # This problem was recently asked by Twitter:
 
+#Given an array of characters with repeats,
+# compress it in place. The length after
+# compression should be less than or equal to the
+# original array.
+
+#Example:
+#Input: ['a', 'a', 'b', 'c', 'c', 'c']
+#Output: ['a', '2', 'b', 'c', '3']
+#6/19/20
+
+class Solution(object):
+    def compress(self, chars):
+        # Fill this in.
+        print(chars)
+
+print("String Compression 6-19")
+print("<-----------------START---------------<")
+print(Solution().compress(['a', 'a', 'b', 'c', 'c', 'c']))
+# ['a', '2', 'b', 'c', '3']
+print("<-----------------END---------------<")
+
+
+
+
+#Hi, here's your problem today.
+# This problem was recently asked by Twitter:
+
 #Given a Roman numeral, find the corresponding
 # decimal value. Inputs will be between 1 and 3999.
 
@@ -55,6 +82,7 @@ class Solution():
                     total += (current_Num-prev)
                 else:
                     total += current_Num
+
             prev = current_Num
 
         return total
