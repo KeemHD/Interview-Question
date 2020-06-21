@@ -13,6 +13,61 @@
 def rearrangeString(s):
     # Fill this in.
     print(s)
+    output = ""
+    inserted = False
+    status = False
+
+    for c in s:
+        if len(output) == 0:
+            output += c
+
+        else:
+            if output[0] != c:
+                temp = output
+                output = ""
+                output = c + temp
+                inserted = True
+
+            for i in range(len(output)-1):
+                if output[i]!= c and output[i+1] != c and not inserted:
+                    output = insertLetter(output,i,c)
+                    inserted = True
+                    break
+
+            if not inserted:
+                output += c
+
+            else:
+                inserted = False
+
+    prev = ""
+    for c in output:
+        if prev == c:
+            status = True
+            break
+        prev = c
+
+    if status == True:
+        return None
+
+    return output
+
+
+def insertLetter(s,i,l):
+    x = 0
+    str = ""
+    while x <= i:
+        str += s[x]
+        x+=1
+
+    str += l
+
+    i +=1
+    while i < len(s):
+        str+= s[i]
+        i+=1
+
+    return str
 
 print("No Adjacent Repeating Characters 6-20")
 print("<-----------------START---------------<")
