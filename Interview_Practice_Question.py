@@ -1,3 +1,24 @@
+#Hi, here's your problem today. This problem was recently asked by Uber:
+
+#Given a number of integers, combine
+# them so it would create the largest number.
+
+#Example:
+#Input:  [17, 7, 2, 45, 72]
+#Output:  77245217
+#6/21/20
+
+
+def largestNum(nums):
+    # Fill this in.
+    print()
+
+print("Make the Largest Number 6-21")
+print("<-----------------START---------------<")
+print(largestNum([17, 7, 2, 45, 72]))
+# 77245217
+print("<-----------------END---------------<")
+
 #Hi, here's your problem today.
 # This problem was recently asked by LinkedIn:
 
