@@ -1,4 +1,28 @@
 #Hi, here's your problem today.
+# This problem was recently asked by LinkedIn:
+
+#Given a string, rearrange the string so that
+# no character next to each other are the same.
+# If no such arrangement is possible, then return None.
+
+#Example:
+#Input: abbccc
+#Output: cbcbca
+#6/20/20
+
+def rearrangeString(s):
+    # Fill this in.
+    print(s)
+
+print("No Adjacent Repeating Characters 6-20")
+print("<-----------------START---------------<")
+print(rearrangeString('abbccc'))
+# cbcabc
+print("<-----------------END---------------<")
+
+
+
+#Hi, here's your problem today.
 # This problem was recently asked by Twitter:
 
 #Given an array of characters with repeats,
