@@ -15,7 +15,30 @@
 def findSmallest(nums):
     # Fill this in.
     print(nums)
+    smal_num = nums[0]+1
 
+    for i in range(1,len(nums)):
+        if nums[i] == smal_num or inSubSet(nums,i,smal_num):
+            smal_num+=1
+        else:
+            break
+
+    return smal_num
+
+
+
+def inSubSet(nums,i,smal_num):
+    status = False
+
+    for x in range(i):
+        for y in range(1,i):
+            if smal_num == (nums[x] + nums[y]):
+                status = True
+                break
+        if status:
+            break
+
+    return status
 
 print("Smallest Number that is not a Sum of a Subset of List 6-22")
 print("<-----------------START---------------<")
