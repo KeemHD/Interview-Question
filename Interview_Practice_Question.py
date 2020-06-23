@@ -11,7 +11,44 @@
 
 def largestNum(nums):
     # Fill this in.
-    print()
+    print(nums)
+    output = []
+    greater = True
+    appended = False
+
+    for n in nums:
+        if len(output) == 0:
+            output.append(n)
+            appended = True
+        else:
+            for i in range(len(output)):
+                out = str(output[i])
+                cur = str(n)
+
+                for x in range(len(cur)):
+                    if int(cur[x]) < int(out[0]):
+                        if len(cur)> 1 and cur[0]>out[0]:
+                            greater = True
+                        else:
+                            greater = False
+
+                if greater:
+                    output.insert(i,int(cur))
+                    appended = True
+                    break
+                greater = True
+
+        if not appended:
+            output.append(int(cur))
+            greater = True
+
+
+    output_string = ""
+    for n in output:
+        output_string += str(n)
+    return output_string
+
+
 
 print("Make the Largest Number 6-21")
 print("<-----------------START---------------<")
