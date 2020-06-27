@@ -1,5 +1,22 @@
 #Hi, here's your problem today.
 # This problem was recently asked by Facebook:
+#6/24/20
+
+#You are given an array of integers.
+# Return all the permutations of this array.
+
+def permute(nums):
+    # Fill this in.
+    print(nums)
+
+print("Permutations of Numbers 6-24")
+print("<-----------------START---------------<")
+print(permute([1, 2, 3]))
+# [[1, 2, 3], [2, 1, 3], [2, 3, 1], [1, 3, 2], [3, 1, 2], [3, 2, 1]]
+print("<-----------------END---------------<")
+
+#Hi, here's your problem today.
+# This problem was recently asked by Facebook:
 
 #You are given the root of a binary tree.
 # Find the path between 2 nodes that maximizes
