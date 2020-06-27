@@ -14,9 +14,24 @@ class Node:
         self.left = None
         self.right = None
 
+def findMaxUtil(root):
+	if root is None:
+		return 0
+
+	l = findMaxUtil(root.left)
+	r = findMaxUtil(root.right)
+	max_single = max(max(l, r) + root.val, root.val)
+	max_top = max(max_single, l+r+ root.val)
+	findMaxUtil.res = max(findMaxUtil.res, max_top)
+
+	return max_single
+
+
 def maxPathSum(root):
-    # Fill this in.
-    print()
+    findMaxUtil.res = float("-inf")
+
+    findMaxUtil(root)
+    return findMaxUtil.res
 
 # (* denotes the max path)
 #       *10
