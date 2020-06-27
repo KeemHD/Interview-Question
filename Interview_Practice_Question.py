@@ -1,4 +1,37 @@
 #Hi, here's your problem today.
+# This problem was recently asked by Microsoft:
+
+#You are given a doubly linked list.
+# Determine if it is a palindrome.
+
+#Can you do this for a singly linked list?
+# 6/27/20
+
+class Node(object):
+    def __init__(self, val):
+        self.val = val
+        self.next = None
+        self.prev = None
+
+def is_palindrome(node):
+    # Fill this in.
+    print()
+
+node = Node('a')
+node.next = Node('b')
+node.next.prev = node
+node.next.next = Node('b')
+node.next.next.prev = node.next
+node.next.next.next = Node('a')
+node.next.next.next.prev = node.next.next
+
+print(" Determine If Linked List is Palindrome 6-27")
+print("<-----------------START---------------<")
+print(is_palindrome(node))
+# True
+print("<-----------------END---------------<")
+
+#Hi, here's your problem today.
 # This problem was recently asked by Amazon:
 
 #You are given an array of integers,
@@ -11,6 +44,19 @@
 def find_continuous_k(list, k):
     # Fill this in.
     print(list,k)
+    temp = set()
+    output_list = []
+    sum = 0
+
+    for i in range(len(list)):
+        sum += list[i]
+
+        if sum == k or sum in temp:
+            output_list.append(list[i])
+        temp.add(sum)
+
+    return output_list
+
 
 print("Subarray with Target Sum 6-26")
 print("<-----------------START---------------<")
