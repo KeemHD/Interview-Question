@@ -1,6 +1,39 @@
 #Hi, here's your problem today.
 # This problem was recently asked by Microsoft:
 
+#Given the root of a binary tree,
+# print its level-order traversal.
+# For example:
+
+#  1
+# / \
+#2   3
+#   / \
+#  4   5
+
+#The following tree should output 1, 2, 3, 4, 5.
+#6/28/20
+
+class Node:
+    def __init__(self, val, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def print_level_order(root):
+    # Fill this in.
+    print()
+
+root = Node(1, Node(2), Node(3, Node(4), Node(5)))
+print("Level Order Traversal of Binary Tree 6-28")
+print("<-----------------START---------------<")
+print_level_order(root)
+# 1 2 3 4 5
+print("<-----------------END---------------<")
+
+#Hi, here's your problem today.
+# This problem was recently asked by Microsoft:
+
 #You are given a doubly linked list.
 # Determine if it is a palindrome.
 
@@ -25,7 +58,7 @@ node.next.next.prev = node.next
 node.next.next.next = Node('a')
 node.next.next.next.prev = node.next.next
 
-print(" Determine If Linked List is Palindrome 6-27")
+print("Determine If Linked List is Palindrome 6-27")
 print("<-----------------START---------------<")
 print(is_palindrome(node))
 # True
