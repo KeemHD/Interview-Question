@@ -1,6 +1,47 @@
 #Hi, here's your problem today.
 # This problem was recently asked by Apple:
 
+#You are given the root of a binary tree, along
+# with two nodes, A and B. Find and return the
+# lowest common ancestor of A and B. For this problem,
+# you can assume that each node also has a
+# pointer to its parent, along with its left and right child.
+#6/30/20
+
+class TreeNode:
+    def __init__(self, val):
+        self.left = None
+        self.right = None
+        self.parent = None
+        self.val = val
+
+
+def lowestCommonAncestor(root, a, b):
+    # Fill this in.
+    return root.right
+
+#   a
+#  / \
+# b   c
+#    / \
+#   d*  e*
+root = TreeNode('a')
+root.left = TreeNode('b')
+root.left.parent = root
+root.right = TreeNode('c')
+root.right.parent = root
+a = root.right.left = TreeNode('d')
+root.right.left.parent = root.right
+b = root.right.right = TreeNode('e')
+root.right.right.parent = root.right
+print("Lowest Common Ancestor of 2 Nodes in Binary Tree 6-30")
+print("<-----------------START---------------<")
+print(lowestCommonAncestor(root, a, b).val)
+# c
+print("<-----------------END---------------<")
+#Hi, here's your problem today.
+# This problem was recently asked by Apple:
+
 #You are given two strings, A and B.
 # Return whether A can be shifted some number of times to get B.
 
@@ -8,6 +49,7 @@
 # A can be shifted 3 times to the right to get B.
 # A = abc and B= acb should return false.
 #6/29/20
+
 def shift(str):
     first_letter = str[0]
     temp = str[1:] + first_letter
@@ -26,6 +68,7 @@ def is_shifted(a, b):
         status = True
         print(a + " = " + b)
     return status
+
 print("Shifted String 6-29")
 print("<-----------------START---------------<")
 print(is_shifted('abcde', 'cdeab'))
