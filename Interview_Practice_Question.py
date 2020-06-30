@@ -8,11 +8,24 @@
 # A can be shifted 3 times to the right to get B.
 # A = abc and B= acb should return false.
 #6/29/20
+def shift(str):
+    first_letter = str[0]
+    temp = str[1:] + first_letter
+    return temp
 
 def is_shifted(a, b):
     # Fill this in.
-    print()
-
+    print(a + " "+ b)
+    status = False
+    if len(a) == len(b):
+        i = 0
+        while a != b or i <= len(a):
+            a = shift(a)
+            i += 1
+    if a == b:
+        status = True
+        print(a + " = " + b)
+    return status
 print("Shifted String 6-29")
 print("<-----------------START---------------<")
 print(is_shifted('abcde', 'cdeab'))
