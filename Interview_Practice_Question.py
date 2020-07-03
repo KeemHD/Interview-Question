@@ -17,7 +17,12 @@
 class Solution():
     def plusOne(self, digits):
         # Fill this in.
-        print()
+        print(digits)
+        nums = ""
+        for n in digits:
+            nums += str(n)
+
+        return int(nums)+1
 
 num = [2, 9, 9]
 
