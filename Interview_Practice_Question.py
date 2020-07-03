@@ -16,6 +16,21 @@ class Solution(object):
     def findDisappearedNumbers(self, nums):
         # Fill this in.
         print(nums)
+        dict = {}
+        output = []
+
+        for i in range(1,(len(nums)+1)):
+            dict[i] = 0
+
+        for i in range(len(nums)):
+            if nums[i] in dict:
+                dict[nums[i]] += 1
+
+        for x in dict:
+            if dict[x] == 0:
+                output.append(x)
+
+        return output
 
 nums = [4, 6, 2, 6, 7, 2, 1]
 print("Find Missing Numbers in an Array 7-2")
