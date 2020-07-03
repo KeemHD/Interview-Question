@@ -18,11 +18,31 @@ class Solution():
     def plusOne(self, digits):
         # Fill this in.
         print(digits)
+        carry = 1
+        total = []
+
+        for i in range(len(digits)):
+            temp = digits[len(digits)-1-i] + carry
+            carry = int(temp/10)
+            temp = temp%10
+            total.insert(0,temp)
+
+        return total
+
+        ''' different solution is here
         nums = ""
         for n in digits:
             nums += str(n)
 
-        return int(nums)+1
+        output = []
+        temp = int(nums) +1
+        nums = str(temp)
+        
+        for c in nums:
+            output.append(int(c))
+
+        return output
+        different solution ends here'''
 
 num = [2, 9, 9]
 
