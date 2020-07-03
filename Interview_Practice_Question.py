@@ -1,4 +1,35 @@
 #Hi, here's your problem today.
+# This problem was recently asked by LinkedIn:
+
+#Given a non-empty array where each element
+# represents a digit of a non-negative integer,
+# add one to the integer. The most significant
+# digit is at the front of the array and each
+# element in the array contains only one digit.
+# Furthermore, the integer does not have leading
+# zeros, except in the case of the number '0'.
+
+#Example:
+#Input: [2,3,4]
+#Output: [2,3,5]
+#7/3/20
+
+class Solution():
+    def plusOne(self, digits):
+        # Fill this in.
+        print()
+
+num = [2, 9, 9]
+
+print("Plus One 7-3")
+print("<-----------------START---------------<")
+print(Solution().plusOne(num))
+# [3, 0, 0]
+print("<-----------------END---------------<")
+
+
+
+#Hi, here's your problem today.
 # This problem was recently asked by Twitter:
 
 #Given an array of integers of size n,
@@ -16,18 +47,19 @@ class Solution(object):
     def findDisappearedNumbers(self, nums):
         # Fill this in.
         print(nums)
-        dict = {}
+
         output = []
+        my_dict = {}
 
         for i in range(1,(len(nums)+1)):
-            dict[i] = 0
+            my_dict[i] = 0
 
         for i in range(len(nums)):
-            if nums[i] in dict:
-                dict[nums[i]] += 1
+            if nums[i] in my_dict:
+                my_dict[nums[i]] += 1
 
-        for x in dict:
-            if dict[x] == 0:
+        for x in my_dict:
+            if my_dict[x] == 0:
                 output.append(x)
 
         return output
