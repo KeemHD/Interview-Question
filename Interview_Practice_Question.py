@@ -1,6 +1,32 @@
 #Hi, here's your problem today.
 # This problem was recently asked by Twitter:
 
+#Given an array of integers of size n,
+# where all elements are between 1 and n inclusive,
+# find all of the elements of [1, n] that do not
+# appear in the array. Some numbers may appear more than once.
+
+#Example:
+#Input: [4,5,2,6,8,2,1,5]
+#Output: [3,7]
+#For this problem, you can assume that you can mutate the input array.
+#7/2/20
+
+class Solution(object):
+    def findDisappearedNumbers(self, nums):
+        # Fill this in.
+        print(nums)
+
+nums = [4, 6, 2, 6, 7, 2, 1]
+print("Find Missing Numbers in an Array 7-2")
+print("<-----------------START---------------<")
+print(Solution().findDisappearedNumbers(nums))
+# [3, 5]
+print("<-----------------END---------------<")
+
+#Hi, here's your problem today.
+# This problem was recently asked by Twitter:
+
 #You are given the root of a binary tree.
 # Find the level for the binary tree with
 # the minimum sum, and return that value.
