@@ -21,7 +21,17 @@ class ListNode(object):
 class Solution(object):
     def hasCycle(self, head):
         # Fill this in.
-        print()
+        node_dict = {}
+
+        while head:
+            if head in node_dict:
+                return True
+
+            node_dict[head] = 0
+            head = head.next
+
+        return False
+
 
 testHead = ListNode(4)
 node1 = ListNode(3)
