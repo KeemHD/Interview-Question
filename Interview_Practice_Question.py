@@ -19,7 +19,34 @@
 class Solution(object):
     def topKFrequent(self, words, k):
         # Fill this in.
-        print()
+        print(words)
+        temp_list = []
+        output_list = []
+        my_dict = {}
+
+        for w in words:
+            if w in my_dict:
+                my_dict[w] += 1
+            else:
+                my_dict[w] = 1
+
+        greatest = 0
+
+        for x in my_dict:
+            if my_dict[x] > greatest:
+                greatest = my_dict[x]
+
+        i=0
+        while i < k:
+            for x in my_dict:
+                if my_dict[x] == greatest:
+                    temp_list.append(x)
+            greatest -= 1
+            output_list += sorted(temp_list)
+            temp_list.clear()
+            i+=1
+
+        return output_list
 
 words = ["daily", "interview", "pro", "pro", "for", "daily", "pro", "problems"]
 k = 2
