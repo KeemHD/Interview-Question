@@ -1,4 +1,27 @@
 #Hi, here's your problem today.
+# This problem was recently asked by Facebook:
+
+#Given a file path with folder names, '..'
+# (Parent directory), and '.' (Current directory),
+# return the shortest possible file path (Eliminate all the '..' and '.').
+
+#Example
+#Input: '/Users/Joma/Documents/../Desktop/./../'
+#Output: '/Users/Joma/'
+#7/7/20
+
+def shortest_path(file_path):
+    # Fill this in.
+    print(file_path)
+
+print("Absolute Path 7-7")
+print("<-----------------START---------------<")
+print(shortest_path('/Users/Joma/Documents/../Desktop/./../'))
+# /Users/Joma/
+print("<-----------------END---------------<")
+
+
+#Hi, here's your problem today.
 # This problem was recently asked by Google:
 
 #Design a Tic-Tac-Toe game played between two
