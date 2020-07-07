@@ -51,14 +51,90 @@
 #7/6/20
 
 class TicTacToe(object):
+
     def __init__(self, n):
         # Fill this in.
-        print()
+        self.board = [["-" for x in range(n)] for y in range(n)]
+        self.print_board()
 
     def move(self, row, col, player):
         # Fill this in.
+        if player == 1:
+            c = "X"
+        else:
+            c = "O"
+
+        grid = self.board
+        grid[row][col] = c
+        self.print_board()
+
+        if self.check_for_winner(row,col,c):
+            return ("Player "+ str(player)+" is the winner: "+ c)
+
+    def print_board(self):
+        board = self.board
+        for i in range(len(board)):
+            print(board[i])
         print()
 
+    def check_for_winner(self,r,c,p):
+        winner = False
+        count = 0
+
+        for i in range(len(self.board)): # works for horizontal
+            if self.board[r][i] == p:
+                count+=1
+            else:
+                count = 0
+
+            if count == len(self.board):
+                winner = True
+                break
+
+
+        if not winner:
+            count = 0
+            for i in range(len(self.board)): # works for vertical
+                if self.board[i][c] == p:
+                    count+=1
+                else:
+                    count = 0
+
+                if count == len(self.board):
+                    winner = True
+                    break
+
+
+        if not winner:
+            count = 0
+
+            for i in range(len(self.board)): # works for diagonal right
+                if self.board[i][i] == p:
+                    count +=1
+                else:
+                    count = 0
+
+                if count == len(self.board):
+                    winner = True
+                    break
+
+        if not winner:
+            count = 0
+
+            for i in range(len(self.board)):  # works for diagonal left
+                if self.board[i][len(self.board)-1-i] == p:
+                    count += 1
+                else:
+                    count = 0
+
+                if count == len(self.board):
+                    winner = True
+                    break
+
+        return winner
+
+print("Design Tic-Tac-Toe 7-6")
+print("<-----------------START---------------<")
 board = TicTacToe(3)
 board.move(0, 0, 1)
 board.move(0, 2, 2)
@@ -66,9 +142,6 @@ board.move(2, 2, 1)
 board.move(1, 1, 2)
 board.move(2, 0, 1)
 board.move(1, 0, 2)
-
-print("Design Tic-Tac-Toe 7-6")
-print("<-----------------START---------------<")
 print(board.move(2, 1, 1))
 print("<-----------------END---------------<")
 
