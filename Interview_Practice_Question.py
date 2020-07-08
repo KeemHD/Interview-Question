@@ -13,6 +13,30 @@
 def shortest_path(file_path):
     # Fill this in.
     print(file_path)
+    path = ""
+
+    for i in range(len(file_path)-1):
+        if file_path[i] == "." and file_path[i+1] == ".":
+            path = go_back(path)
+            break
+        path+=file_path[i]
+
+    return path
+
+def go_back(path):
+    count = 0
+
+    for i in range(len(path)):
+        if path[len(path)-1-i] == "/":
+            count +=1
+
+        if count == 2:
+            break
+
+
+
+    return path[:(len(path)-i)]
+
 
 print("Absolute Path 7-7")
 print("<-----------------START---------------<")
