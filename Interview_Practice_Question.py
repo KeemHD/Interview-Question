@@ -1,6 +1,53 @@
 #Hi, here's your problem today.
 # This problem was recently asked by Facebook:
 
+#Given a directed graph, reverse the directed
+# graph so all directed edges are reversed.
+
+#Example:
+#Input:
+#A -> B, B -> C, A ->C
+
+#Output:
+#B->A, C -> B, C -> A
+#7/8/20
+
+from collections import defaultdict
+
+class Node:
+    def __init__(self, value):
+        self.adjacent = []
+        self.value = value
+
+def reverse_graph(graph):
+    # Fill this in.
+    return graph
+
+a = Node('a')
+b = Node('b')
+c = Node('c')
+
+a.adjacent += [b, c]
+b.adjacent += [c]
+
+graph = {
+    a.value: a,
+    b.value: b,
+    c.value: c,
+}
+
+print("Reverse a Directed Graph 7-8")
+print("<-----------------START---------------<")
+for _, val in reverse_graph(graph).items():
+  print(val.adjacent)
+# []
+# ['a', 'b']
+# ['a']
+print("<-----------------END---------------<")
+
+#Hi, here's your problem today.
+# This problem was recently asked by Facebook:
+
 #Given a file path with folder names, '..'
 # (Parent directory), and '.' (Current directory),
 # return the shortest possible file path (Eliminate all the '..' and '.').
