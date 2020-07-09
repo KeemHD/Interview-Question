@@ -52,6 +52,43 @@ class Solution:
         print("Version1: "+ version1)
         print("Version2: "+ version2)
 
+        solution = 0
+
+        v1 = version1.split(".")
+        v2 = version2.split(".")
+
+        while int(v1[-1]) == 0:
+            v1.pop()
+
+        while int(v2[-1]) == 0:
+            v2.pop()
+
+        if len(v1) == len(v2):
+            length = len(v1)
+
+        elif len(v1) > len(v2):
+            length = len(v2)
+            solution = 1
+
+        else:
+            length = len(v1)
+            solution = -1
+
+        for i in range(length):
+            temp = int(v1[i])-int(v2[i])
+
+            if temp < 0:
+                solution = -1
+                break
+
+            elif temp > 0:
+                solution = 1
+                break
+
+        return solution
+
+
+
 version1 = "1.0.1"
 version2 = "1"
 
