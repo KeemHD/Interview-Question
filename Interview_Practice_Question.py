@@ -1,4 +1,27 @@
 #Hi, here's your problem today.
+# This problem was recently asked by Microsoft:
+
+#Return the longest run of 1s for a given
+# integer n's binary representation.
+
+#Example:
+#Input: 242
+#Output: 4
+#242 in binary is 0b11110010, so the longest run of 1 is 4.
+#7/11/20
+
+
+def longest_run(n):
+    # Fill this in.
+    print()
+
+print("Consecutive Ones 7-11")
+print("<-----------------START---------------<")
+print(longest_run(242))
+# 4
+print("<-----------------END---------------<")
+
+#Hi, here's your problem today.
 # This problem was recently asked by Amazon:
 
 #MS Excel column titles have the following pattern:
@@ -31,6 +54,78 @@ class Solution:
     def convertToTitle(self, n):
         # Fill this in.
         print(n)
+        output_str = ""
+
+        while n > 0:
+            temp = (n % 26)
+            n = int(n/26)
+            output_str += str(Solution.intToChar(self,temp))
+
+
+        return output_str[::-1]
+
+
+
+
+
+
+
+    def intToChar(self,c):
+        if c == 1:
+            return "A"
+        if c == 2:
+            return "B"
+        if c == 3:
+            return "C"
+        if c == 4:
+            return "D"
+        if c == 5:
+            return "E"
+        if c == 6:
+            return "F"
+        if c == 7:
+            return "G"
+        if c == 8:
+            return "H"
+        if c == 9:
+            return "I"
+        if c == 10:
+            return "J"
+        if c == 11:
+            return "K"
+        if c == 12:
+            return "L"
+        if c == 13:
+            return "M"
+        if c == 14:
+            return "N"
+        if c == 15:
+            return "O"
+        if c == 16:
+            return "P"
+        if c == 17:
+            return "Q"
+        if c == 18:
+            return "R"
+        if c == 19:
+            return "S"
+        if c == 20:
+            return "T"
+        if c == 21:
+            return "U"
+        if c == 22:
+            return "V"
+        if c == 23:
+            return "W"
+        if c == 24:
+            return "X"
+        if c == 25:
+            return "Y"
+        if c == 0:
+            return "Z"
+
+        else:
+            return None
 
 input1 = 1
 input2 = 456976
