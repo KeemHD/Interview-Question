@@ -13,7 +13,23 @@
 
 def longest_run(n):
     # Fill this in.
-    print()
+    print(n)
+    print(bin(n)[2:])
+    binary_num = bin(n)[2:]
+
+    longest = 0
+    count = 0
+
+    for i in range(len(binary_num)):
+        if int(binary_num[i]) == 1:
+            count += 1
+        else:
+            if count > longest:
+                longest = count
+                count = 0
+
+    return longest
+
 
 print("Consecutive Ones 7-11")
 print("<-----------------START---------------<")
