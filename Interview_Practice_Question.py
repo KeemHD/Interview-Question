@@ -91,6 +91,42 @@ print("<-----------------END--------------<")
 def ip_addresses(s, ip_parts=[]):
     # Fill this in.
     print(s)
+    sz = len(s)
+
+    # Check for string size
+    if sz > 12:
+        return []
+    snew = s
+
+    # Generating different combinations.
+    for i in range(1, sz - 2):
+        for j in range(i + 1, sz - 1):
+            for k in range(j + 1, sz):
+                snew = snew[:k] + "." + snew[k:]
+                snew = snew[:j] + "." + snew[j:]
+                snew = snew[:i] + "." + snew[i:]
+
+                if is_valid(snew):
+                    ip_parts.append(snew)
+                snew = s
+
+    return ip_parts
+
+
+def is_valid(ip):
+    ip = ip.split(".")
+
+    # Checking for the corner cases
+    for i in ip:
+        if len(i) > 3 or int(i) < 0 or int(i) > 255:
+            return False
+        if len(i) > 1 and int(i) == 0:
+            return False
+        if len(i) > 1 and int(i) != 0 and i[0] == '0':
+            return False
+    return True
+
+
 
 print("Generate All IP Addresses 7-12")
 print("<-----------------START--------------<")
