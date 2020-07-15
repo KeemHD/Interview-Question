@@ -11,6 +11,18 @@ import math
 def is_palindrome(n):
     # Fill this in.
     print(n)
+    num = []
+
+    while n > 0:
+        num.append(n%10)
+        n = int(n/10)
+
+    for i in range(len(num)):
+        if num[i] != num[len(num)-1-i]:
+            return False
+
+    return True
+
 
 print("Palindrome Integers 7-15")
 print("<-----------------START--------------<")
