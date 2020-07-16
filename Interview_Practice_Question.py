@@ -60,7 +60,31 @@ class Node(object):
 
     def __str__(self):
         # Fill this in.
+        output = ""
+
+        if self is None:
+            return
+        q = []
+
+        q.append(self)
+
+        while q:
+            count = len(q)
+
+            while count > 0:
+                temp = q.pop(0)
+                print(temp.val, end='')
+                output += (temp.val)#, end=' ')
+                if temp.left:
+                    q.append(temp.left)
+                if temp.right:
+                    q.append(temp.right)
+
+                count -= 1
+            print(' ')
+
         return ""
+
 
 tree = Node('a')
 tree.left = Node('b')
