@@ -94,6 +94,76 @@ print("<-----------------END--------------<")
 def column_name(n):
     # Fill this in.
     print(n)
+    output_str = ""
+
+    if n > 26:
+        while n > 0:
+            temp = (n % 26)
+            #print(temp)
+            n = int(n / 26)
+            output_str += str(intToChar(temp))
+    else:
+        output_str = str(intToChar(n))
+
+    return output_str[::-1]
+
+
+def intToChar(c):
+    if c == 1:
+        return "A"
+    if c == 2:
+        return "B"
+    if c == 3:
+        return "C"
+    if c == 4:
+        return "D"
+    if c == 5:
+        return "E"
+    if c == 6:
+        return "F"
+    if c == 7:
+        return "G"
+    if c == 8:
+        return "H"
+    if c == 9:
+        return "I"
+    if c == 10:
+        return "J"
+    if c == 11:
+        return "K"
+    if c == 12:
+        return "L"
+    if c == 13:
+        return "M"
+    if c == 14:
+        return "N"
+    if c == 15:
+        return "O"
+    if c == 16:
+        return "P"
+    if c == 17:
+        return "Q"
+    if c == 18:
+        return "R"
+    if c == 19:
+        return "S"
+    if c == 20:
+        return "T"
+    if c == 21:
+        return "U"
+    if c == 22:
+        return "V"
+    if c == 23:
+        return "W"
+    if c == 24:
+        return "X"
+    if c == 25:
+        return "Y"
+    if c == 26:
+        return "Z"
+
+    else:
+        return None
 
 print("Spreadsheet Columns 7-13")
 print("<-----------------START--------------<")
