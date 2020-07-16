@@ -1,6 +1,34 @@
 #Hi, here's your problem today.
 # This problem was recently asked by Twitter:
 
+#Given a string with only ( and ), find the minimum number of characters to add or subtract to fix the string such that the brackets are balanced.
+
+#Example:
+#Input: '(()()'
+#Output: 1
+#Explanation:
+
+#The fixed string could either be ()()
+# by deleting the first bracket, or (()())
+# by adding a bracket. These are not the only ways of
+# fixing the string, there are many other ways by adding
+# it in different positions!
+#7/16/20
+
+def fix_brackets(s):
+    # Fill this in.
+    print(s)
+
+print("Fix Brackets 7-16")
+print("<-----------------START--------------<")
+print(fix_brackets('(()()'))
+# 1
+print("<-----------------START--------------<")
+
+
+#Hi, here's your problem today.
+# This problem was recently asked by Twitter:
+
 #Given an integer, check if that integer is a palindrome.
 # For this problem do not convert the integer to a
 # string to check if it is a palindrome.
