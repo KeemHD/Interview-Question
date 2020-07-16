@@ -18,10 +18,30 @@
 def fix_brackets(s):
     # Fill this in.
     print(s)
+    stack = []
+    removed = False
+
+    for c in s:
+        if c == "(":
+            stack.append(c)
+        elif c == ")":
+            for i in range(len(stack)):
+                if stack[-1] == "(":
+                    stack.pop()
+                    removed = True
+                    break
+
+            if not removed:
+                stack.append(c)
+            removed = False
+
+    return(len(stack))
+
 
 print("Fix Brackets 7-16")
 print("<-----------------START--------------<")
 print(fix_brackets('(()()'))
+
 # 1
 print("<-----------------START--------------<")
 
