@@ -1,4 +1,31 @@
 #Hi, here's your problem today.
+# This problem was recently asked by Uber:
+
+#You are given a list of n numbers,
+# where every number is at most k indexes
+# away from its properly sorted index.
+# Write a sorting algorithm (that will be given the number k)
+# for this list that can solve this in O(n log k)
+
+#Example:
+#Input: [3, 2, 6, 5, 4], k=2
+#Output: [2, 3, 4, 5, 6]
+#As seen above, every number is at most 2
+# indexes away from its proper sorted index.
+#7/18/20
+
+def sort_partially_sorted(nums, k):
+    # Fill this in.
+    print(nums)
+
+print("Sort a Partially Sorted List 7-18")
+print("<-----------------START--------------<")
+print(sort_partially_sorted([3, 2, 6, 5, 4], 2))
+# [2, 3, 4, 5, 6]
+print("<-----------------END--------------<")
+
+
+#Hi, here's your problem today.
 # This problem was recently asked by LinkedIn:
 
 #Given a binary tree, find the most frequent subtree sum.
@@ -22,8 +49,7 @@ class Node():
 
 def most_freq_subtree_sum(root):
     # fill this in.
-    print()
-
+    return  ""
 root = Node(3, Node(1), Node(-3))
 
 print("Most Frequent Subtree Sum 7-17")
