@@ -18,6 +18,38 @@ def sort_partially_sorted(nums, k):
     # Fill this in.
     print(nums)
 
+    for i in range(len(nums)-1):
+        cur = nums[i]
+        inserted = False
+
+        if i > 1:
+            x = 2
+            while x > 0:
+               if(cur < nums[i-x]):
+                   nums.pop(i)
+                   nums.insert((i-x),cur)
+                   inserted = True
+                   break
+               x-=1
+
+        if not inserted:
+            x = 1
+            while x <=2:
+                if(cur < nums[i+x]):
+                    nums.pop(i)
+                    nums.insert((i+x-1),cur)
+                    inserted = True
+                    break
+                x+=1
+
+        if not inserted:
+            nums.pop(i)
+            nums.insert(i+x,cur)
+
+
+
+    return nums
+
 print("Sort a Partially Sorted List 7-18")
 print("<-----------------START--------------<")
 print(sort_partially_sorted([3, 2, 6, 5, 4], 2))
