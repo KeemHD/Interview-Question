@@ -16,7 +16,30 @@
 
 def findTime(arr, cooldown):
     # Fill this in.
-    print()
+    print(arr)
+    task_dict = {}
+    prev_task = arr[0]
+    time = 1
+
+    task_dict[arr[0]] = 1
+
+    for i in range(1,len(arr)):
+        if prev_task == arr[i]:
+            time += cooldown +1
+            task_dict[prev_task] += 1
+
+        elif arr[i] in task_dict:
+            time +=(1+int(cooldown/2))
+            task_dict[arr[i]] += 1
+
+
+        else:
+            time += 1
+            task_dict[arr[i]] = 1
+
+
+        prev_task = arr[i]
+    return time
 
 print("Multitasking 7-19")
 print("<-----------------START--------------<")
