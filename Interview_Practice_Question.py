@@ -1,6 +1,36 @@
 #Hi, here's your problem today.
 # This problem was recently asked by Facebook:
 
+#Given a list of building in the form of
+# (left, right, height), return what the
+# skyline should look like. The skyline should
+# be in the form of a list of (x-axis, height),
+# where x-axis is the next point where there is a
+# change in height starting from 0, and height
+# is the new height starting from the x-axis.
+#7/23/20
+
+def generate_skyline(buildings):
+    # Fill this in.
+    print()
+
+#            2 2 2
+#            2 2 2
+#        1 1 2 2 2 1 1
+#        1 1 2 2 2 1 1
+#        1 1 2 2 2 1 1
+# pos: 1 2 3 4 5 6 7 8 9
+
+print("City Skyline 7-23")
+print("<-----------------START--------------<")
+print(generate_skyline([(2, 8, 3), (4, 6, 5)]))
+# [(2, 3), (4, 5), (7, 3), (9, 0)]
+print("<-----------------END--------------<")
+
+
+#Hi, here's your problem today.
+# This problem was recently asked by Facebook:
+
 #Kaprekar's Constant is the number 6174.
 # This number is special because it has the
 # property where for any 4-digit number that
