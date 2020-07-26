@@ -26,6 +26,7 @@ def generate_bst(n):
 
 print("Generate Binary Search Trees 7-25")
 print("<-----------------START--------------<")
+
 '''for tree in generate_bst(3):
     print(tree)'''
 print("<-----------------END--------------<")
