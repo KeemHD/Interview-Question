@@ -14,6 +14,11 @@ def find_fixed_point(nums):
     # Fill this in.
     print(nums)
 
+    for i in range(len(nums)):
+        if i == nums[i]:
+            return i
+    return None
+
 print("Fixed Point 7-27")
 print("<-----------------START--------------<")
 print(find_fixed_point([-5, 1, 3, 4]))
