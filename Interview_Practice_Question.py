@@ -1,6 +1,48 @@
 #Hi, here's your problem today.
 # This problem was recently asked by Apple:
 
+#Given a binary tree, return the list of node
+# values in zigzag order traversal. Here's an example
+
+# Input:
+#         1
+#       /   \
+#      2     3
+#     / \   / \
+#    4   5 6   7
+#
+# Output: [1, 3, 2, 4, 5, 6, 7]
+#7/28/20
+
+class Node:
+    def __init__(self, value, left=None, right=None):
+        self.value = value
+        self.left = left
+        self.right = right
+
+def zigzag_order(tree):
+    # Fill this in.
+    print()
+
+n4 = Node(4)
+n5 = Node(5)
+n6 = Node(6)
+n7 = Node(7)
+n2 = Node(2, n4, n5)
+n3 = Node(3, n6, n7)
+n1 = Node(1, n2, n3)
+
+
+print("ZigZag Binary Tree 7-28")
+print("<-----------------START--------------<")
+print(zigzag_order(n1))
+# [1, 3, 2, 4, 5, 6, 7]
+print("<-----------------END--------------<")
+
+
+#Hi, here's your problem today.
+# This problem was recently asked by Apple:
+
 #A fixed point in a list is where the
 # value is equal to its index. So for example the
 # list [-5, 1, 3, 4], 1 is a fixed point in the
