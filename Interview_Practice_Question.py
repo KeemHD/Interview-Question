@@ -1,6 +1,50 @@
 #Hi, here's your problem today.
 # This problem was recently asked by Twitter:
 
+#Given a tree, find if the binary tree is
+# height balanced or not. A height balanced
+# binary tree is a tree where every node's 2 subtree
+# do not differ in height by more than 1.
+#7/30/20
+
+class Node:
+    def __init__(self, value, left=None, right=None):
+        self.value = value
+        self.left = left
+        self.right = right
+
+def is_height_balanced(tree):
+    # Fill this in.
+    print()
+
+#     1
+#    / \
+#   2   3
+#  /
+# 4
+n4 = Node(4)
+n3 = Node(3)
+n2 = Node(2, n4)
+n1 = Node(1, n2, n3)
+
+print("Determine Height Balanced Binary Tree 7-30")
+print("<-----------------START--------------<")
+print(is_height_balanced(n1))
+# True
+
+#     1
+#    /
+#   2
+#  /
+# 4
+n1 = Node(1, n2)
+print(is_height_balanced(n1))
+# False
+print("<-----------------END--------------<")
+
+#Hi, here's your problem today.
+# This problem was recently asked by Twitter:
+
 #Given a list of numbers, find the smallest window
 # to sort such that the whole list will be sorted.
 # If the list is already sorted return (0, 0).
