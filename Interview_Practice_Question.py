@@ -1,9 +1,35 @@
 #Hi, here's your problem today.
+# This problem was recently asked by Google:
+
+#Given two strings, find if there is a one-to-one
+# mapping of characters between the two strings.
+
+#Example
+#Input: abc, def
+#Output: True # a -> d, b -> e, c -> f
+
+#Input: aab, def
+#Ouput: False # a can't map to d and e
+#8/3/20
+
+def has_character_map(str1, str2):
+    # Fill this in.
+    print()
+
+print("Character Map 8-3")
+print("<-----------------START--------------<")
+print(has_character_map('abc', 'def'))
+# True
+print(has_character_map('aac', 'def'))
+# False
+print("<-----------------END--------------<")
+
+#Hi, here's your problem today.
 # This problem was recently asked by AirBNB:
 
 #Given a linked list and a number k,
 # rotate the linked list by k places.
-#8/3/20
+#8/2/20
 
 class Node:
     def __init__(self, value, next=None):
