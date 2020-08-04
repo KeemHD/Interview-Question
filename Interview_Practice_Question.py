@@ -14,8 +14,29 @@
 
 def has_character_map(str1, str2):
     # Fill this in.
-    print()
+    print(str1,str2)
+    status = False
+    str_dict = {}
 
+    if len(str1) == len(str2):
+        status = True
+
+        for i in range(len(str1)):
+            if str1[i] not in str_dict:
+                    if str2[i] not in str_dict.values():
+                        str_dict[str1[i]] = str2[i]
+                    else:
+                        status = False
+                        break
+
+            if str1[i] in str_dict:
+                if str_dict[str1[i]] != str2[i]:
+                    status = False
+                    break
+
+    print(str_dict)
+
+    return status
 print("Character Map 8-3")
 print("<-----------------START--------------<")
 print(has_character_map('abc', 'def'))
