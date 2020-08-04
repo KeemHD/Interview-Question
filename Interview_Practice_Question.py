@@ -67,7 +67,20 @@ class Node:
 
 def rotate_list(list, k):
     # Fill this in.
-    print()
+    print("Original: "+str(list))
+    i = 0
+
+    while i < k:
+        head = list
+        while list.next != None:
+            prev = list
+            list = list.next
+
+        prev.next = None
+        list.next = head
+        i+=1
+
+    return list
 
 # Order is 1, 2, 3, 4
 llist = Node(1, Node(2, Node(3, Node(4))))
@@ -75,7 +88,7 @@ llist = Node(1, Node(2, Node(3, Node(4))))
 print("Rotate Linked List 8-2")
 print("<-----------------START--------------<")
 # Order should now be 3, 4, 1, 2
-print(rotate_list(llist, 2))
+print("Rotated: "+str(rotate_list(llist, 2)))
 # 3412
 print("<-----------------END--------------<")
 #Hi, here's your problem today.
