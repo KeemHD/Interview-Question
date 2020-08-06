@@ -17,7 +17,35 @@
 def reverse_polish_notation(expr):
     # Fill this in.
     print(expr)
+    num_stack = []
+    op_stack = []
 
+    for i in range(len(expr)):
+        if str(expr[i]).isnumeric():
+            num_stack.append(expr[i])
+        else:
+            op_stack.append(expr[i])
+
+    total = num_stack.pop()
+
+    for op in op_stack:
+        if op == "+":
+            total+=num_stack.pop()
+
+        elif op == "-":
+            total = num_stack.pop() - total
+
+        elif op == "*":
+            total*=num_stack.pop()
+
+        elif op == "/":
+            total = num_stack.pop()/total
+
+        else:
+            print(ERROR)
+            break
+
+    return total
 
 print("Reverse Polish Notation Calculator 8-5")
 print("<-----------------START--------------<")
@@ -152,7 +180,7 @@ def rotate_list(list, k):
         prev.next = None
         list.next = head
         i+=1
-    print(head)
+
     return list
 
 # Order is 1, 2, 3, 4
