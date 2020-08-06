@@ -1,6 +1,29 @@
 #Hi, here's your problem today.
 # This problem was recently asked by Facebook:
 
+#Given a list of words, for each word find the
+# shortest unique prefix. You can assume a word
+# will not be a substring of another word
+# (ie play and playing won't be in the same words list)
+
+#Example
+#Input: ['joma', 'john', 'jack', 'techlead']
+#Output: ['jom', 'joh', 'ja', 't']
+#8/6/20
+
+def shortest_unique_prefix(words):
+    # Fill this in.
+    print(words)
+
+print("Shortest unique prefix 8-6")
+print("<-----------------START--------------<")
+print(shortest_unique_prefix(['joma', 'john', 'jack', 'techlead']))
+# ['jom', 'joh', 'ja', 't']
+print("<-----------------END--------------<")
+
+#Hi, here's your problem today.
+# This problem was recently asked by Facebook:
+
 #Given an expression (as a list) in reverse polish notation,
 # evaluate the expression. Reverse polish notation is
 # where the numbers come before the operand.
