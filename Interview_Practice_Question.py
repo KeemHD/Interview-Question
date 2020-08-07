@@ -14,6 +14,24 @@
 def shortest_unique_prefix(words):
     # Fill this in.
     print(words)
+    prefix_dict = {}
+    output = []
+
+
+    for w in words:
+        i = 0
+        pre = ""
+
+        while i < len(w):
+            pre += w[i]
+
+            if pre not in prefix_dict:
+                prefix_dict[pre] = 1
+                output.append(pre)
+                break
+            i+=1
+
+    return output
 
 print("Shortest unique prefix 8-6")
 print("<-----------------START--------------<")
