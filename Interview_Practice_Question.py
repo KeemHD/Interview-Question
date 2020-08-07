@@ -16,7 +16,20 @@ def to_bits(n):
 def reverse_num_bits(num):
     # Fill this in.
     print(num)
-    return -1
+    bit_stream = to_bits(num)
+    bit_stream = bit_stream[::-1]
+    total = 0
+    base = 1
+
+    while len(bit_stream) < 32:
+        bit_stream += "0"
+
+    for i in range(len(bit_stream)):
+        if int(bit_stream[len(bit_stream)-1-i]) == 1:
+            total += base
+        base *= 2
+
+    return total
 
 print("Reverse Bits 8-7")
 print("<-----------------START--------------<")
