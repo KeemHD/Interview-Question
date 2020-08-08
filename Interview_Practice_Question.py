@@ -16,8 +16,14 @@
 def first_recurring_char(s):
     # Fill this in.
     print(s)
+    my_dict = {}
 
+    for c in s:
+        if c in my_dict:
+            return c
+        my_dict[c] = 1
 
+    return None
 
 print("First recurring character 8-8")
 print("<-----------------START--------------<")
