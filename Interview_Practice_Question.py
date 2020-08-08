@@ -1,6 +1,36 @@
 #Hi, here's your problem today.
 # This problem was recently asked by Amazon:
 
+#Given a string, return the first recurring
+# letter that appears. If there are no recurring
+# letters, return None.
+
+#Example:
+#Input: qwertty
+#Output: t
+
+#Input: qwerty
+#Output: None
+#8/8/20
+
+def first_recurring_char(s):
+    # Fill this in.
+    print(s)
+
+
+
+print("First recurring character 8-8")
+print("<-----------------START--------------<")
+print(first_recurring_char('qwertty'))
+# t
+
+print(first_recurring_char('qwerty'))
+# None
+print("<-----------------END--------------<")
+
+#Hi, here's your problem today.
+# This problem was recently asked by Amazon:
+
 #Given a 32 bit integer, reverse the bits and return that number.
 
 #Example:
