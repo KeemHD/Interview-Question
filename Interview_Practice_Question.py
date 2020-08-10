@@ -11,12 +11,56 @@
 def find_palindrome(s):
     # Fill this in.
     print(s)
+    my_dict = {}
 
+    for c in s:
+        if c not in my_dict:
+            my_dict[c] = 1
+        else:
+            my_dict[c]+=1
+
+    odd = 0
+    for x in my_dict:
+        if (my_dict[x] % 2) == 1:
+            odd += 1
+
+    if odd > 1:
+        status = False
+    else:
+        status = True
+
+    str = ""
+    mid = ""
+    if status:
+        print(my_dict)
+        for x in my_dict:
+            if my_dict[x] % 2 == 0:
+                i = 0
+                while i < my_dict[x] / 2:
+                    str += x
+                    i+=1
+            else:
+                mid = x
+
+
+        rev_str = str[::-1]
+
+        if mid != "":
+            i = 0
+            while i < my_dict[mid]:
+                str+=mid
+                i+=1
+
+        str+= rev_str
+    else:
+        return None
+
+    return str
 print("Check for Palindrome 8-10")
 print("<-----------------START--------------<")
 print(find_palindrome('momom'))
 # momom
-print("<-----------------END--------------<")
+print("<-----------------END-------------<")
 
 
 #Hi, here's your problem today.
