@@ -1,6 +1,27 @@
 #Hi, here's your problem today.
 # This problem was recently asked by Microsoft:
 
+#Given a string, determine if there is a way
+# to arrange the string such that the string
+# is a palindrome. If such arrangement exists,
+# return a palindrome (There could be many arrangements).
+# Otherwise return None.
+#8/10/20
+
+def find_palindrome(s):
+    # Fill this in.
+    print(s)
+
+print("Check for Palindrome 8-10")
+print("<-----------------START--------------<")
+print(find_palindrome('momom'))
+# momom
+print("<-----------------END--------------<")
+
+
+#Hi, here's your problem today.
+# This problem was recently asked by Microsoft:
+
 #A maze is a matrix where each cell can either be a 0 or 1.
 # A 0 represents that the cell is empty, and a 1 represents
 # a wall that cannot be walked through. You can also only
@@ -20,7 +41,7 @@
 #The two paths that can only be taken in the
 # above example are: down -> right -> down -> right,
 # and down -> down -> right -> right.
-#8/10/20
+#8/9/20
 
 def paths_through_maze(maze):
     # Fill this in.
