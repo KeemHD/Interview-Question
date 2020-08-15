@@ -1,6 +1,21 @@
-#
-print("Check for Palindrome 8-15")
+#Hi, here's your problem today.
+# This problem was recently asked by LinkedIn:
+
+#Given a list of numbers and an integer k,
+# partition/sort the list such that the all
+# numbers less than k occur before k, and all
+# numbers greater than k occur after the number k.
+#8/15/20
+
+def partition_list(nums, k):
+    # Fill this in.
+    print(nums,k)
+
+print("Partition a List 8-15")
 print("<-----------------START--------------<")
+print(partition_list([2, 2, 2, 5, 2, 2, 2, 2, 5], 3))
+# [2, 2, 2, 2, 2, 2, 2, 2, 5]
+print("<-----------------END--------------<")
 
 
 #Hi, here's your problem today.
