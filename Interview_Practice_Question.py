@@ -1,3 +1,49 @@
+#
+print("Check for Palindrome 8-15")
+print("<-----------------START--------------<")
+#
+print("Check for Palindrome 8-14")
+print("<-----------------START--------------<")
+#
+print("Check for Palindrome 8-13")
+print("<-----------------START--------------<")
+#
+print("Check for Palindrome 8-12")
+print("<-----------------START--------------<")
+
+#Hi, here's your problem today.
+# This problem was recently asked by Apple:
+
+#Given a list of points, an interger k,
+# and a point p, find the k closest points to p.
+#8/11/20
+
+class Point:
+    def __init__(self, x=0, y=0):
+        self.x = x
+        self.y = y
+
+    def __repr__(self):
+        return f"({self.x}, {self.y})"
+
+def closest_points(points, k, p):
+    # Fill this in.
+    print(points)
+
+points = [
+    Point(0, 0),
+    Point(1, 1),
+    Point(2, 2),
+    Point(3, 3),
+]
+
+print("Nearest Points 8-11")
+print("<-----------------START--------------<")
+print(closest_points(points, 2, Point(0, 2)))
+# [(0, 0), (1, 1)]
+print("<-----------------END--------------<")
+
+
 #Hi, here's your problem today.
 # This problem was recently asked by Microsoft:
 
@@ -90,6 +136,9 @@ print("<-----------------END-------------<")
 def paths_through_maze(maze):
     # Fill this in.
     print(maze)
+
+
+
 
 print("Maze Paths 8-9")
 print("<-----------------START--------------<")
