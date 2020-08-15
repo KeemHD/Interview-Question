@@ -10,6 +10,15 @@
 def partition_list(nums, k):
     # Fill this in.
     print(nums,k)
+    output = []
+
+    for n in nums:
+        if n < k:
+            output.insert(0,n)
+        else:
+            output.append(n)
+
+    return output
 
 print("Partition a List 8-15")
 print("<-----------------START--------------<")
