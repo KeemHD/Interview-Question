@@ -1,4 +1,24 @@
 #Hi, here's your problem today.
+# This problem was recently asked by Uber:
+
+#Given a list of possible coins in cents,
+# and an amount (in cents) n, return the
+# minimum number of coins needed to create
+# the amount n. If it is not possible to create the
+# amount using the given coin denomination, return None.
+#8/16/20
+
+def make_change(coins, n):
+    # Fill this in.
+    print(coins,n)
+
+print("Making Change 8-16")
+print("<-----------------START--------------<")
+print(make_change([1, 5, 10, 25], 36))
+# 3 coins (25 + 10 + 1)
+print("<-----------------END--------------<")
+
+#Hi, here's your problem today.
 # This problem was recently asked by LinkedIn:
 
 #Given a list of numbers and an integer k,
@@ -46,6 +66,7 @@ class Node:
 def swap_every_two(llist):
     # Fill this in.
     print(llist)
+
 
 print("Swap Every Two Nodes in a Linked List 8-14")
 print("<-----------------START--------------<")
