@@ -11,6 +11,22 @@
 def make_change(coins, n):
     # Fill this in.
     print(coins,n)
+    change = []
+
+    for i in range(len(coins)):
+        value = coins[len(coins)-1-i]
+
+        if value <= n:
+            num_of_coins = int(n/value)
+            n = n-(num_of_coins * value)
+
+
+            i = 0
+            while i < num_of_coins:
+                change.append(value)
+                i +=1
+
+    return str(len(change)) + " coins "+ str(change)
 
 print("Making Change 8-16")
 print("<-----------------START--------------<")
