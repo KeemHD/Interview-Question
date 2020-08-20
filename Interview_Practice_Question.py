@@ -10,6 +10,15 @@ def rotate_list(nums, k):
     # Fill this in.
     print(nums,k)
 
+    i = 0
+    while i < k:
+        temp = nums[0]
+        for n in range(len(nums)-1):
+            nums[n] = nums[n+1]
+        nums[n+1] = temp
+        i+=1
+
+
 a = [1, 2, 3, 4, 5]
 
 print("Rotate Array 8-20")
