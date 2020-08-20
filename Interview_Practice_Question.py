@@ -1,4 +1,25 @@
 #Hi, here's your problem today.
+# This problem was recently asked by Facebook:
+
+#Given an array and an integer k, rotate
+# the array by k spaces. Do this without generating
+# a new array and without using extra space.
+#8/20/20
+
+def rotate_list(nums, k):
+    # Fill this in.
+    print(nums,k)
+
+a = [1, 2, 3, 4, 5]
+
+print("Rotate Array 8-20")
+print("<-----------------START--------------<")
+rotate_list(a, 2)
+print(a)
+# [3, 4, 5, 1, 2]
+print("<-----------------START--------------<")
+
+#Hi, here's your problem today.
 # This problem was recently asked by Google:
 
 #Given a node in a binary search tree
